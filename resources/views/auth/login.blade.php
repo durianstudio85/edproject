@@ -41,7 +41,6 @@
             <h1>Signin</h1>
         </header>
         <!-- Custom Login form built with the ProfilePress WordPress plugin - http://profilepress.net -->
-
         <style type="text/css">
 
         </style>

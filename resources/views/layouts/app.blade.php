@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Edproject</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
@@ -26,8 +26,6 @@
         }
     </style>
 </head>
-
-
 <body id="app-layout">
     <div class="navbar navbar-inverse navbar-fixed-left">
         <div class="nav-header">
@@ -56,6 +54,7 @@
                     <li><a href="#">Sub Menu5</a></li>
                 </ul>
             </li> -->
+            <li><a href="#">Dashboard</a></li>
             <li><a href="#">Profile</a></li>
             <li><a href="{{ url('/course') }}">Course</a></li>
             <li><a href="#">Contact</a></li>

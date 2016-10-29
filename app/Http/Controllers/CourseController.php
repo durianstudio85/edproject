@@ -52,13 +52,6 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-
-        // $course = new Course;
-        // $course->name = $request->get('name');
-        // $course->slug = str_slug($request->get('name'), '_');;
-        // $course->description = $request->get('description');
-        // $course->save();
-
         $slug = str_slug($request->get('name'), '_');
         $data = [
             'name' => $request->get('name'),
@@ -91,8 +84,8 @@ class CourseController extends Controller
      */
     public function edit($id)
     {
-        $lesson = Lesson::findOrFail($id);
         $course = Course::findOrFail($id);
+        $lesson = Lesson::where('courses_id', '=', $course->id)->get();
         return view('course.edit', compact('course', 'lesson'));
     }
 
@@ -112,8 +105,6 @@ class CourseController extends Controller
             'slug' => $slug,
             'description' => $request->get('description'),
         ];
-        // $course->update($request->all());
-        // Course::update($data);
         $course->update($data);
         return redirect('/');
     }
