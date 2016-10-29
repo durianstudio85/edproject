@@ -27,7 +27,7 @@
                         <li><a href="{{ url('/') }}">HOME</a></li>
                         <li><a href="{{ url('/about') }}">ABOUT</a></li>
                         <li><a href="{{ url('/register') }}">SIGNUP</a></li>
-                        <li><a href="{{ url('/login') }}">SIGN-IN</a></li>
+                        <li><a href="{{ url('/login') }}">SIGNIN</a></li>
                     </ul>
                 </nav><!--/.nav-collapse -->
             </div>

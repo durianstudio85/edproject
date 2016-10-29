@@ -28,7 +28,7 @@
                     <li><a href="{{ url('/') }}">HOME</a></li>
                     <li><a href="{{ url('/about') }}">ABOUT</a></li>
                     <li><a href="{{ url('/register') }}">SIGNUP</a></li>
-                    <li><a href="{{ url('/login') }}">SIGN-IN</a></li>
+                    <li><a href="{{ url('/login') }}">SIGNIN</a></li>
                 </ul>
             </nav><!--/.nav-collapse -->
         </div>
@@ -38,7 +38,7 @@
     <div class="col-md-12  signup-form  ">
         <header>
             <h3>Start Learning today....</h3>
-            <h1>Sign-in</h1>
+            <h1>Signin</h1>
         </header>
         <!-- Custom Login form built with the ProfilePress WordPress plugin - http://profilepress.net -->
 
