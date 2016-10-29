@@ -1,0 +1,98 @@
+body{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.navbar-fixed-left {
+	background-color: #51c4b7;
+  	width: 250px;
+  	position: fixed;
+  	border-radius: 0 !important;
+  	height: 100%;
+  	float: left;
+}
+
+.navbar-fixed-left .navbar-nav > li {
+  float: none;  /* Cancel default li float: left */
+  width: 250px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #4e5859 !important;
+}
+
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    background-color: #51c4b7 !important;
+    color: #ffffff !important;
+}
+
+.navbar-fixed-left + .container {
+  padding-left: 160px;
+}
+
+/* On using dropdown menu (To right shift popuped) */
+.navbar-fixed-left .navbar-nav > li > .dropdown-menu {
+  margin-top: -50px;
+  margin-left: 140px;
+}
+
+.nav-header{
+	background-color: #51c4b7;
+	height: 300px;
+	width: 100%;
+	margin-top: -5px;
+}
+
+.navbar-inverse {
+    background-color: #f2f2f2 !important;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 0px solid transparent !important;
+}
+
+.navbar-inverse .navbar-brand {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.user i, .user h3{
+	color: #ffffff;
+}
+
+.user img{
+    max-width: 127px;
+    height: auto;
+}
+
+.user h3{
+  margin-top: -13px;
+}
+
+.header-section{
+	height: 295px;
+	width: 100%;
+}
+
+.textbox-search{
+	margin: 4%;
+    width: 92%;
+    border: 1px solid #e0dada;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.social-icon {
+    margin: 528px 0px 30px 0px !important;
+}
+
+.social-icon h5{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.course-list{
+}
