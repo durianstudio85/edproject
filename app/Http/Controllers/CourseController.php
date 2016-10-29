@@ -66,7 +66,7 @@ class CourseController extends Controller
             'description' => $request->get('description'),
         ];
         Course::Create($data);
-        return redirect('/');
+        return redirect('/course');
     }
 
     /**
