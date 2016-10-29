@@ -106,6 +106,7 @@ body{
 			color: #ffffff;
 			margin-top: -50px;
 		}
+
 		.button-wrap{
 			/*margin-right:62px;*/
     		margin-right: 306px;
@@ -123,6 +124,22 @@ body{
 			color: #ffffff;
 			
 		}	
+@media only screen  and (max-width : 1824px) {
+	.button-wrap{
+		margin-right: 17%;
+	}
+}
+
+@media only screen  and (max-width : 979px) {
+	.button-wrap{
+		margin-right: 37%;
+	}
+}
+
+
+
+
+
 		/*caption area */
 
 
