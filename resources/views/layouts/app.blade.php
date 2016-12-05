@@ -55,7 +55,7 @@
                 </ul>
             </li> -->
             <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="{{ url('/profile') }}">Profile</a></li>
             <li><a href="{{ url('/course') }}">Course</a></li>
             <li><a href="#">Contact</a></li>
              <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>

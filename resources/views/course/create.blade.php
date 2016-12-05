@@ -14,18 +14,23 @@
         </div>
         <div class="row">
             <div class="col-md-10">
+                <div class="">
+
+                </div>
                 <h1>Admin Section/Control Page</h1>
                 <hr>
                 <div class="row">
                     <div class="col-md-8">
-                        {!! Form::open(['url'=>'course/create']) !!}
+                        {!! Form::open(['url'=>'course/create','files'=>'true']) !!}
                             <div class="form-group">
                                 {!! Form::text('name', null,['class'=>'form-control', 'placeholder'=>'Enter Name']) !!}
                             </div>
                             <div class="form-group">
                                 {!! Form::textarea('description', null,['class'=>'form-control', 'placeholder'=>'Description']) !!}
                             </div>
-
+                            <div class="form-group">
+                                {!! Form::file('photo', ['class' => 'form-control']) !!}
+                            </div>
                             {!! Form::submit('Create', ['class' => 'btn btn-info']) !!}
                             <a href="{{ url('/course') }}" class="btn btn-default">Cancel</a>
                         {!! Form::close() !!}

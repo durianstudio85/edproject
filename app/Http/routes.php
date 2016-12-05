@@ -33,3 +33,6 @@ Route::delete('course/{id}', 'CourseController@destroy');
 Route::get('/course/{course_id}/lesson/create', 'LessonController@create');
 Route::post('/course/{course_id}/lesson/create', 'LessonController@store');
 Route::get('/course/{course_id}/lesson/{id}', 'LessonController@edit');
+
+// profile
+Route::get('/profile', 'ProfileController@index' );
