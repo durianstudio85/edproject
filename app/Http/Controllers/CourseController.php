@@ -25,7 +25,9 @@ class CourseController extends Controller
     {
         // $courses = DB::table('courses')->get();
         $courses = Course::get();
-        return view('course.index', compact('courses'));
+        $user = Auth::User();  
+        $user_role = $user->user_role;
+        return view('course.index', compact('courses', 'user_role'));
     }
 
     /**
@@ -36,7 +38,7 @@ class CourseController extends Controller
     public function create()
     {
         $user = Auth::User();     
-        if ($user->id == '1') {
+        if ($user->user_role == 'admin') {
             return view('course.create');
         }else{
             return redirect('/course');
@@ -53,10 +55,20 @@ class CourseController extends Controller
     public function store(Request $request)
     {
         $slug = str_slug($request->get('name'), '_');
+        $photo = $request->file('photo');
+        $filename = str_random(20).$photo->getClientOriginalName();
+        $photo->move(public_path().'/upload',$filename);
+        // instructor Details
+        $instructor_img = $request->file('instructor_img');
+        $instructor_filename = str_random(20).$photo->getClientOriginalName();
+        $instructor_img->move(public_path().'/upload',$instructor_filename);
         $data = [
             'name' => $request->get('name'),
             'slug' => $slug,
             'description' => $request->get('description'),
+            'photo' => $filename,
+            'instructor_name' => $request->get('instructor_name'),
+            'instructor_img' => $instructor_filename,
         ];
         Course::Create($data);
         return redirect('/course');
@@ -84,9 +96,14 @@ class CourseController extends Controller
      */
     public function edit($id)
     {
-        $course = Course::findOrFail($id);
-        $lesson = Lesson::where('courses_id', '=', $course->id)->get();
-        return view('course.edit', compact('course', 'lesson'));
+        $user = Auth::User();     
+        if ($user->user_role == 'admin') {
+            $course = Course::findOrFail($id);
+            $lesson = Lesson::where('courses_id', '=', $course->id)->get();
+            return view('course.edit', compact('course', 'lesson'));
+        }else{
+            return redirect('/course');
+        }
     }
 
     /**

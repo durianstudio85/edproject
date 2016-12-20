@@ -17,6 +17,7 @@ class CreateLessonTable extends Migration
             $table->integer('courses_id')->unsigned();
             $table->string('title');
             $table->string('link');
+            $table->string('duration');
             $table->string('short_description');
             $table->rememberToken();
             $table->timestamps();

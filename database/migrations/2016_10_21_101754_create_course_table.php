@@ -16,7 +16,9 @@ class CreateCourseTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('slug')->unique();
-            $table->string('description');
+            $table->longText('description');
+            $table->string('instructor_name');
+            $table->text('instructor_img');
             $table->timestamps();
         });
     }

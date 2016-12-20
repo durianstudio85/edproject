@@ -8,6 +8,7 @@ use App\Http\Requests;
 
 use App\Course;
 use App\Lesson;
+use Auth;
 
 class LessonController extends Controller
 {
@@ -58,7 +59,10 @@ class LessonController extends Controller
      */
     public function show($id)
     {
-       
+       $lesson = Lesson::findOrFail($id);
+       $course = Course::findOrFail($lesson->courses_id);
+       // $course = Course::where('id', '=', $lesson->courses_id)->get();
+       return view('lesson.show', compact('course','lesson'));
     }
 
     /**
@@ -69,7 +73,10 @@ class LessonController extends Controller
      */
     public function edit($id)
     {
-        
+        $current_lesson = Lesson::findOrFail($id);
+        $course = Course::findOrFail($current_lesson->courses_id);
+        $lesson = Lesson::where('courses_id', '=', $course->id)->get();
+       return view('lesson.edit', compact('lesson', 'course','current_lesson'));
     }
 
     /**
@@ -81,7 +88,9 @@ class LessonController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        $lesson = Lesson::findOrFail($id);
+        $lesson->update($request->all());
+        return redirect('/course/'.$lesson->courses_id);
     }
 
     /**

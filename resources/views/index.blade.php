@@ -25,7 +25,7 @@
         <nav id="navbar" class="navbar-collapse collapse header-menu">
           	<ul class="nav navbar-nav navbar-right">
 	           	<li><a href="{{ url('/') }}">HOME</a></li>
-                <li><a href="{{ url('/about') }}">ABOUT</a></li>
+                <li><a href="{{ url('/') }}">ABOUT</a></li>
                 <li><a href="{{ url('/register') }}">SIGNUP</a></li>
                 <li><a href="{{ url('/login') }}">SIGNIN</a></li>
           	</ul>

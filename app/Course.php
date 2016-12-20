@@ -10,6 +10,9 @@ class Course extends Model
 		'name',
 		'slug',
 		'description',
+		'photo',
+		'instructor_name',
+		'instructor_img',
 	];
 
 

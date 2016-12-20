@@ -1,7 +1,12 @@
+@font-face {
+    font-family: HelveUltraLight;
+    src: url(../fonts/HelveticaNeue-UltraLight.otf);
+}
+
 body{
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
-
+/*Helvetica Neue*/
 .navbar-fixed-left {
 	background-color: #51c4b7;
   	width: 250px;
@@ -51,7 +56,11 @@ body{
     position: relative;
     min-height: 50px;
     margin-bottom: 20px;
-    border: 0px solid transparent !important;
+    border: 0px solid transparent !important;   
+}
+
+.navbar-nav{
+    height: 651px;
 }
 
 .navbar-inverse .navbar-brand {
@@ -99,6 +108,8 @@ body{
     background-color: #f1eded;
     padding: 26px;
     margin-left: 0px;
+    border-right: 4px solid #51c4b7;
+    border-radius: 13px;
 }
 
 .course-img{
@@ -117,4 +128,122 @@ body{
     color: #5e6d81;
     font-size: 15px;
     font-weight: bold;
+}
+
+.btn-custom {
+    color: #ffffff;
+    background-color: #51c4b7;
+    border-color: #51c4b7;
+    border-radius: 1px;
+}
+
+.btn-custom:hover {
+    color: #ffffff;
+    background-color: #51c4b7;
+    border-color: #51c4b7;
+    border-radius: 1px;
+}
+
+.btn-default{
+    border-radius: 1px;  
+}
+
+.detailedlabel {
+    font-size: 18px;
+    color: #51c4b7;
+    margin-top: 30px;
+    font-family: "HelveUltraLight";
+    font-weight: bold;
+}
+
+.instructor_label{
+    font-family: "HelveUltraLight";
+    font-size: 18px;
+    color: #54575a!important;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.content_separator{
+    border-left: 3px solid #dddddd;
+}
+
+.img-circle img{
+    max-width: 145px;
+    border-radius: 50%;
+}
+
+.link_lessons{
+    color: #51c4b7;
+    font-size: 20px;
+}
+
+.link_lessons:hover{
+    color: #51c4b7;
+}
+.duration_size{
+    font-size: 18px;  
+}
+
+.course-header{
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.course-header h3{
+    color: white;
+    font-size: 36px;
+}
+
+.course-header h1{
+    color: #51c4b7;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.course-header p{
+    color: white;
+    font-size: 18px;
+}
+
+.lesson_description{
+    font-family: "HelveUltraLight";
+    font-size: 18px;
+    font-weight: bold;
+    color: #54575a;
+    padding-Bottom: 20px;
+}
+
+.lesson_title{
+    color: #51534a!important;
+    font-weight: bold;
+    text-align: left;
+}
+
+.course-title, .course-title:hover{
+    color: #51c4b7;
+}
+
+.table-custom>tbody>tr>td{
+        border-top: 0px solid #ddd !important;
+}
+
+    border-top: 0px solid #ddd;
+
+@media screen and (max-width: 1940px) {
+    .header-all, .content-all{
+        width: 70%;
+    }
+
+    .content-description{
+        margin-left: 83px;
+        width: 73%;
+    }
+}
+
+@media screen and (max-width: 1090px){
+    .content-description{
+        width: 66%;
+        margin-left: 110px;
+    }
 }

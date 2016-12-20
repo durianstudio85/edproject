@@ -32,7 +32,11 @@ Route::delete('course/{id}', 'CourseController@destroy');
 
 Route::get('/course/{course_id}/lesson/create', 'LessonController@create');
 Route::post('/course/{course_id}/lesson/create', 'LessonController@store');
-Route::get('/course/{course_id}/lesson/{id}', 'LessonController@edit');
+Route::get('/lesson/{id}', 'LessonController@show');
+Route::get('/lesson/{id}/edit', 'LessonController@edit');
+Route::patch('/lesson/{id}/edit', 'LessonController@update');
 
 // profile
 Route::get('/profile', 'ProfileController@index' );
+Route::get('/profile/edit', 'ProfileController@edit' );
+Route::patch('/profile/edit', 'ProfileController@update' );
