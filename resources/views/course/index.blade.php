@@ -8,15 +8,13 @@
                     <div class="course-header">
                         <h3>CHOOSE OUR</h3>
                         <h1>SPECIALIZED COURSES</h1>
-                        <p>This portal will provide you the latest photos, videos, and audio of the companies events. We design this<br>
-                            portal to give you the best user experience.</p> 
                     </div>
                 </div>         
             </div>
         </div>
         <div class="row">
             <div class="col-md-10 col-sm-5 content-all">
-                <h1>Course </h1>
+                <h1 class="pad-title">Courses </h1>
                 <hr>
                 @foreach($courses as $course)
                     <div class="row course-list">
@@ -29,7 +27,7 @@
                         <div class="col-md-7 col-sm-7 content-description">
                             <a href="{{ url('/course/'.$course->id) }}"  class="course-title"><h1>{{ $course->name }}</h1></a>
                             <p>{{ $course->description }}</p>
-                            <a href="{{ url('/course/'.$course->id) }}" class="btn btn-custom">View</a>&nbsp;
+                            <a href="{{ url('/course/'.$course->id) }}" class="btn btn-custom">Enroll</a>&nbsp;
                         </div>
                         <div class="col-md-2">
                             

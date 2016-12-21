@@ -228,6 +228,9 @@ body{
         border-top: 0px solid #ddd !important;
 }
 
+.pad-title{
+    padding-left: 30px;
+}
 
 @media screen and (max-width: 1940px) {
     .header-all, .content-all{

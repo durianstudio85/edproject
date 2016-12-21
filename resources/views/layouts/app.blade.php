@@ -56,10 +56,9 @@
                     <li><a href="#">Sub Menu5</a></li>
                 </ul>
             </li> -->
-            <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
-            <li><a href="{{ url('/profile') }}">Profile</a></li>
-            <li><a href="{{ url('/course') }}">Course</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="{{ url('/dashboard') }}">My Courses</a></li>
+            <li><a href="{{ url('/course') }}">Browse Courses</a></li>
+            <li><a href="{{ url('/profile') }}">Settings</a></li>
              <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
             </li>
         </ul>
