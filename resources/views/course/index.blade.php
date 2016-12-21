@@ -4,7 +4,7 @@
     <div class="row">
         <div class="header-section" style="background-image: url('{{ asset('assets/images/header-main.jpg') }}')">
             <div class="row">
-                <div class="col-md-10 col-sm-5 header-all">
+                <div class="col-md-10 header-all">
                     <div class="course-header">
                         <h3>CHOOSE OUR</h3>
                         <h1>SPECIALIZED COURSES</h1>

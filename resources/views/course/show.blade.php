@@ -4,7 +4,7 @@
     <div class="row">
         <div class="header-section" style="background-image: url('{{ asset('assets/images/header-main.jpg') }}')">
             <div class="row">
-                <div class="col-md-10  header-all">
+                <div class="col-md-10 header-all">
                     <div class="course-header">
                         <h3>CHOOSE OUR</h3>
                         <h1>SPECIALIZED COURSES</h1>
@@ -37,10 +37,7 @@
                    </div>
                    <div class="col-md-7 content_separator">
                         <p>{{ $course->description }}</p>
-                        
-                            <a href="{{ url('/course/'.$course->id.'/lesson/create') }}" class="btn btn-custom">Add Lesson</a>
-                        
-                       
+                        <!-- <a href="{{ url('/course/'.$course->id.'/lesson/create') }}" class="btn btn-custom">Add Lesson</a> -->
                         <table class="table table-custom">
                             <thead>
                                 <th style="width: 85%">&nbsp;</th>
@@ -53,7 +50,6 @@
                                 </tr>   
                             @endforeach
                         </table>
-
                    </div>
                 </div>
             </div>

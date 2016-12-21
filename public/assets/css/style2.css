@@ -228,7 +228,6 @@ body{
         border-top: 0px solid #ddd !important;
 }
 
-    border-top: 0px solid #ddd;
 
 @media screen and (max-width: 1940px) {
     .header-all, .content-all{
@@ -240,6 +239,12 @@ body{
         width: 73%;
     }
 }
+
+/*@media screen and (max-width: 1619px){
+    .header-all{
+        width: 54%;
+    }
+}*/
 
 @media screen and (max-width: 1090px){
     .content-description{
