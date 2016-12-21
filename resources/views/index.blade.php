@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>EdProject</title>
 	<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+	<link rel="icon" type="image/png" href="{{ asset('assets/images/edprojectfavicon.png') }}" />
 	<link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }} ">
