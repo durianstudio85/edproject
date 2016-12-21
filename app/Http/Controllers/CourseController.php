@@ -41,7 +41,7 @@ class CourseController extends Controller
         if ($user->user_role == 'admin') {
             return view('course.create');
         }else{
-            return redirect('/course');
+            return redirect('/courses');
         }
         
     }
@@ -71,7 +71,7 @@ class CourseController extends Controller
             'instructor_img' => $instructor_filename,
         ];
         Course::Create($data);
-        return redirect('/course');
+        return redirect('/courses');
     }
 
     /**
@@ -102,7 +102,7 @@ class CourseController extends Controller
             $lesson = Lesson::where('courses_id', '=', $course->id)->get();
             return view('course.edit', compact('course', 'lesson'));
         }else{
-            return redirect('/course');
+            return redirect('/courses');
         }
     }
 
@@ -135,6 +135,6 @@ class CourseController extends Controller
     public function destroy($id)
     {
         Course::destroy($id);
-        return redirect('/course');
+        return redirect('/courses');
     }
 }

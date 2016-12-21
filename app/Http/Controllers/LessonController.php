@@ -48,7 +48,7 @@ class LessonController extends Controller
     {
         $data = $request->all();
         Lesson::Create($data);
-        return redirect('/course/'.$request->get('courses_id').'/lesson/create');
+        return redirect('/courses/'.$request->get('courses_id').'/lesson/create');
     }
 
     /**
@@ -90,7 +90,7 @@ class LessonController extends Controller
     {
         $lesson = Lesson::findOrFail($id);
         $lesson->update($request->all());
-        return redirect('/course/'.$lesson->courses_id);
+        return redirect('/courses/'.$lesson->courses_id);
     }
 
     /**

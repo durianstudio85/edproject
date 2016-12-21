@@ -224,9 +224,7 @@ body{
     color: #51c4b7;
 }
 
-.table-custom>tbody>tr>td{
-        border-top: 0px solid #ddd !important;
-}
+
 
 .pad-title{
     padding-left: 30px;

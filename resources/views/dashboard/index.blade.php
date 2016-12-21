@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-md-10 col-sm-5 content-all">
                 <h1 class="pad-title">Dashboard
-                    &nbsp;<a href="{{ url('/course/create') }}" class="btn btn-custom">Add Course</a>
+                    &nbsp;<a href="{{ url('/courses/create') }}" class="btn btn-custom">Add Course</a>
                 </h1>
 
                 <hr>
@@ -34,8 +34,8 @@
                                 <td>{{ $course->instructor_name }}</td>
                                 <td>{{ str_limit($course->description, $limit = 80, $end = '...') }}</td>
                                 <td>
-                                    <a href="{{ url('/course/'.$course->id.'/edit') }}" class="btn btn-custom">Edit</a>
-                                    <a href="{{ url('/course/'.$course->id.'/lesson/create') }}" class="btn btn-custom">Add Lesson</a>
+                                    <a href="{{ url('/courses/'.$course->id.'/edit') }}" class="btn btn-custom">Edit</a>
+                                    <a href="{{ url('/courses/'.$course->id.'/lesson/create') }}" class="btn btn-custom">Add Lesson</a>
                                 </td>
                             </tr>
                         @endforeach

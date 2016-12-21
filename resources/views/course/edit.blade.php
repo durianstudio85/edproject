@@ -27,7 +27,7 @@
                             </div>
 
                             {!! Form::submit('Save', ['class' => 'btn btn-custom']) !!}
-                            <a href="{{ url('/course') }}" class="btn btn-default">Cancel</a>
+                            <a href="{{ url('/courses') }}" class="btn btn-default">Cancel</a>
                         {!! Form::close() !!}
                     </div>
                     <div class="col-md-8">

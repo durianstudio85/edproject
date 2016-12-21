@@ -34,7 +34,7 @@
                         </div>
                    </div>
                    <div class="col-md-7 content_separator">
-                        {!! Form::open(['url'=>'course/'.$course->id.'/lesson/create']) !!}
+                        {!! Form::open(['url'=>'courses/'.$course->id.'/lesson/create']) !!}
                         {!! Form::hidden('courses_id', $course->id); !!}
                             <div class="col-md-5">
                                 <div class="form-group">
@@ -58,7 +58,7 @@
                             </div>
                             <div class="col-md-12">
                                 {!! Form::submit('Save', ['class' => 'btn btn-custom']) !!}
-                                <a href="{{ url('/course/'.$course->id.'/') }}" class="btn btn-default">Cancel</a>
+                                <a href="{{ url('/courses/'.$course->id.'/') }}" class="btn btn-default">Cancel</a>
                             </div>
                         {!! Form::close() !!}
 
@@ -79,7 +79,7 @@
                                         <td class="duration_size">{{ $lessons->duration }}</td>
                                         <td> 
                                             <a href="{{ url('/lesson/'.$lessons->id.'/edit') }}" class="btn btn-link">Edit</a>
-                                            {!! Form::open(['method'=>'delete', 'url' => ['course', $course->id]]) !!}
+                                            {!! Form::open(['method'=>'delete', 'url' => ['courses', $course->id]]) !!}
                                                 <button type="submit" class="btn btn-link">
                                                     Remove
                                                 </button>

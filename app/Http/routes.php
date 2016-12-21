@@ -20,18 +20,18 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 
-Route::get('/course', 'CourseController@index');
-Route::get('/course/create', 'CourseController@create');
-Route::post('/course/create', 'CourseController@store');
-Route::get('/course/{id}', 'CourseController@show');
-Route::get('/course/{id}/edit', 'CourseController@edit');
-Route::patch('/course/{id}/edit', 'CourseController@update');
-Route::delete('course/{id}', 'CourseController@destroy');
+Route::get('/courses', 'CourseController@index');
+Route::get('/courses/create', 'CourseController@create');
+Route::post('/courses/create', 'CourseController@store');
+Route::get('/courses/{id}', 'CourseController@show');
+Route::get('/courses/{id}/edit', 'CourseController@edit');
+Route::patch('/courses/{id}/edit', 'CourseController@update');
+Route::delete('courses/{id}', 'CourseController@destroy');
 
 // Route::resource('/course', 'CourseController');
 
-Route::get('/course/{course_id}/lesson/create', 'LessonController@create');
-Route::post('/course/{course_id}/lesson/create', 'LessonController@store');
+Route::get('/courses/{course_id}/lesson/create', 'LessonController@create');
+Route::post('/courses/{course_id}/lesson/create', 'LessonController@store');
 Route::get('/lesson/{id}', 'LessonController@show');
 Route::get('/lesson/{id}/edit', 'LessonController@edit');
 Route::patch('/lesson/{id}/edit', 'LessonController@update');

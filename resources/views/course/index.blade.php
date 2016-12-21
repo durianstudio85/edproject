@@ -25,9 +25,9 @@
                             </center>
                         </div>
                         <div class="col-md-7 col-sm-7 content-description">
-                            <a href="{{ url('/course/'.$course->id) }}"  class="course-title"><h1>{{ $course->name }}</h1></a>
+                            <a href="{{ url('/courses/'.$course->id) }}"  class="course-title"><h1>{{ $course->name }}</h1></a>
                             <p>{{ $course->description }}</p>
-                            <a href="{{ url('/course/'.$course->id) }}" class="btn btn-custom">Enroll</a>&nbsp;
+                            <a href="{{ url('/courses/'.$course->id) }}" class="btn btn-custom">Enroll</a>&nbsp;
                         </div>
                         <div class="col-md-2">
                             

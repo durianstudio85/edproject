@@ -57,7 +57,7 @@
                             </div>
                             <div class="col-md-12">
                                 {!! Form::submit('Save', ['class' => 'btn btn-custom']) !!}
-                                <a href="{{ url('/course/'.$course->id.'/') }}" class="btn btn-default">Cancel</a>
+                                <a href="{{ url('/courses/'.$course->id.'/') }}" class="btn btn-default">Cancel</a>
                             </div>
                         {!! Form::close() !!}
                         <br>
@@ -76,8 +76,8 @@
                                         <td> <a class="link_lessons" href="{{ url('/lesson/'.$lessons->id) }}">{{ $lessons->title }}</td>
                                         <td class="duration_size">{{ $lessons->duration }}</td>
                                         <td> 
-                                            <a href="{{ url('/course/'.$lessons->courses_id.'/lesson/'.$lessons->id) }}" class="btn btn-link">Edit</a>
-                                            {!! Form::open(['method'=>'delete', 'url' => ['course', $course->id]]) !!}
+                                            <a href="{{ url('/courses/'.$lessons->courses_id.'/lesson/'.$lessons->id) }}" class="btn btn-link">Edit</a>
+                                            {!! Form::open(['method'=>'delete', 'url' => ['courses', $course->id]]) !!}
                                                 <button type="submit" class="btn btn-link">
                                                     Remove
                                                 </button>

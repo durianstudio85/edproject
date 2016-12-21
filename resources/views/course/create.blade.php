@@ -21,7 +21,7 @@
                 <hr>
                 <div class="row">
                     <div class="col-md-8">
-                        {!! Form::open(['url'=>'course/create','files'=>'true']) !!}
+                        {!! Form::open(['url'=>'courses/create','files'=>'true']) !!}
                             <div class="panel panel-default">
                                 <div class="panel-heading">Course Information</div>
                                 <div class="panel-body">
@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                             {!! Form::submit('Create', ['class' => 'btn btn-custom']) !!}
-                            <a href="{{ url('/course') }}" class="btn btn-default">Cancel</a>
+                            <a href="{{ url('/courses') }}" class="btn btn-default">Cancel</a>
                         {!! Form::close() !!}
                     </div>
                 </div>

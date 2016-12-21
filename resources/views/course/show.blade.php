@@ -6,8 +6,8 @@
             <div class="row">
                 <div class="col-md-10 header-all">
                     <div class="course-header">
-                        <h3>CHOOSE OUR</h3>
-                        <h1>SPECIALIZED COURSES</h1>
+                        <h3>WELCOME TO</h3>
+                        <h1>{{ $course->name }}</h1>
                       
                     </div>   
                 </div>         
@@ -32,6 +32,8 @@
                             
                             <p class="detailedlabel">{{ $course->slug }}</p>
                             <p class="instructor_label">Category</p>
+                            <br>
+                            <p><a href="#" class="btn btn-custom">Enroll</a></p>
                         </div>
                    </div>
                    <div class="col-md-7 content_separator">
