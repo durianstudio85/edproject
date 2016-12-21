@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
 	<title>EdProject</title>
 	<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
-	<link rel="icon" type="image/png" href="{{ asset('assets/images/edprojectfavicon.png') }}" />
+	<link href="{{ asset('assets/images/favicon.ico') }}" rel="shortcut icon">
+	<!-- <link rel="icon" type="image/png" href="{{ asset('assets/images/edprojectfavicon.png') }}" /> -->
 	<link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }} ">
@@ -26,7 +27,7 @@
         <nav id="navbar" class="navbar-collapse collapse header-menu">
           	<ul class="nav navbar-nav navbar-right">
 	           	<li><a href="{{ url('/') }}">HOME</a></li>
-                <li><a href="{{ url('/') }}">ABOUT</a></li>
+                 <li><a href="#">ABOUT</a></li>
                 <li><a href="{{ url('/register') }}">SIGNUP</a></li>
                 <li><a href="{{ url('/login') }}">SIGNIN</a></li>
           	</ul>
