@@ -44,3 +44,7 @@ Route::patch('/profile/edit', 'ProfileController@update' );
 //Dashboard
 
 Route::get('/dashboard', 'DashboardController@index' );
+
+
+//My course
+Route::get('/mycourses', 'MycourseController@index' );
