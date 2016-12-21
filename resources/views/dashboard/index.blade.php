@@ -8,15 +8,14 @@
                     <div class="course-header">
                         <h3>CHOOSE OUR</h3>
                         <h1>SPECIALIZED COURSES</h1>
-                        <p>This portal will provide you the latest photos, videos, and audio of the companies events. We design this<br>
-                            portal to give you the best user experience.</p> 
+                      
                     </div>
                 </div>         
             </div>
         </div>
         <div class="row">
             <div class="col-md-10 col-sm-5 content-all">
-                <h1>Dashboard
+                <h1 class="pad-title">Dashboard
                     &nbsp;<a href="{{ url('/course/create') }}" class="btn btn-custom">Add Course</a>
                 </h1>
 

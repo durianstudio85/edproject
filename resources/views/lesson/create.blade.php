@@ -8,15 +8,14 @@
                     <div class="course-header">
                         <h3>CHOOSE OUR</h3>
                         <h1>SPECIALIZED COURSES</h1>
-                        <p>This portal will provide you the latest photos, videos, and audio of the companies events. We design this<br>
-                            portal to give you the best user experience.</p> 
+                      
                     </div>
                 </div>         
             </div>
         </div>
         <div class="row">
             <div class="col-md-10 content-all">
-                <h1>Admin Section/Control Page</h1>
+                <h1 class="pad-title">Admin Section/Control Page</h1>
                 <hr>
                 <div class="row">
                    <div class="col-md-3">
