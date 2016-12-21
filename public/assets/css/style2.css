@@ -238,8 +238,72 @@ body{
         margin-left: 83px;
         width: 73%;
     }
+    .lesson-video{
+        width: 85%;
+        background-color: #000000;
+        text-align: center;
+    }
 }
 
+@media screen and (max-width: 1823px){
+    .lesson-video{
+        width: 84%;
+        background-color: #000000;
+        text-align: center;
+    }   
+}
+
+@media screen and (max-width: 1706px){
+    .lesson-video{
+        width: 83%;
+        background-color: #000000;
+        text-align: center;
+    }   
+}
+
+@media screen and (max-width: 1603px){
+    .lesson-video{
+        width: 82%;
+        background-color: #000000;
+        text-align: center;
+    }   
+}
+@media screen and (max-width: 1512px){
+    .lesson-video{
+        width: 80%;
+        background-color: #000000;
+        text-align: center;
+    }   
+
+    .lesson-video iframe{
+        width: 80%;
+    
+    }   
+}
+
+@media screen and (max-width: 1360px){
+    .lesson-video{
+        width: 78%;
+        background-color: #000000;
+        text-align: center;
+    }
+
+    .lesson-video iframe{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1360px){
+    .lesson-video{
+        width: 75%;
+        background-color: #000000;
+        text-align: center;
+    }
+
+    .lesson-video iframe{
+        width: 100%;
+    }
+}
 /*@media screen and (max-width: 1619px){
     .header-all{
         width: 54%;
@@ -250,5 +314,17 @@ body{
     .content-description{
         width: 66%;
         margin-left: 110px;
+    }
+}
+
+@media screen and (max-width: 1076px){
+    .lesson-video{
+        width: 70%;
+        background-color: #000000;
+        text-align: center;
+    }
+
+    .lesson-video iframe{
+        width: 100%;
     }
 }

@@ -40,3 +40,7 @@ Route::patch('/lesson/{id}/edit', 'LessonController@update');
 Route::get('/profile', 'ProfileController@index' );
 Route::get('/profile/edit', 'ProfileController@edit' );
 Route::patch('/profile/edit', 'ProfileController@update' );
+
+//Dashboard
+
+Route::get('/dashboard', 'DashboardController@index' );

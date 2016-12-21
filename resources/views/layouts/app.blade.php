@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Edproject</title>
-
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/edprojectfavicon.png') }}" />
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
@@ -16,9 +16,6 @@
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
-
-
-
     <link href="{{ asset('assets/css/style2.css') }}" rel="stylesheet">
 
     <style>
@@ -59,7 +56,7 @@
                     <li><a href="#">Sub Menu5</a></li>
                 </ul>
             </li> -->
-            <li><a href="#">Dashboard</a></li>
+            <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
             <li><a href="{{ url('/profile') }}">Profile</a></li>
             <li><a href="{{ url('/course') }}">Course</a></li>
             <li><a href="#">Contact</a></li>

@@ -4,10 +4,10 @@
     <div class="row">
         <div class="header-section">
             <div class="row">
-                <div class="col-md-10" style="width: 1680px;background-color: #000000;text-align: center;">
+                <div class="col-md-10 lesson-video">
                     {!! $lesson->link !!}
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-10 content-all">
                 <!-- <h1>Course</h1> <hr> -->
                 <br>
                 <br>
@@ -44,7 +44,7 @@
                         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
                    </div>
-                </div>s
+                </div>
                 </div>
             </div>
             </div>

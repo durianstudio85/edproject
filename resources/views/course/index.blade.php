@@ -16,11 +16,7 @@
         </div>
         <div class="row">
             <div class="col-md-10 col-sm-5 content-all">
-                <h1>Course 
-                    @if ( $user_role === 'admin')
-                        <a href="{{ url('/course/create') }}" class="btn btn-custom">Create</a>
-                    @endif
-                </h1>
+                <h1>Course </h1>
                 <hr>
                 @foreach($courses as $course)
                     <div class="row course-list">
@@ -34,13 +30,6 @@
                             <a href="{{ url('/course/'.$course->id) }}"  class="course-title"><h1>{{ $course->name }}</h1></a>
                             <p>{{ $course->description }}</p>
                             <a href="{{ url('/course/'.$course->id) }}" class="btn btn-custom">View</a>&nbsp;
-                            @if ( $user_role === 'admin')
-                                <a href="{{ url('/course/'.$course->id.'/edit') }}" class="btn btn-custom">Edit</a>&nbsp;
-                                {!! Form::open(['method'=>'delete', 'url' => ['course', $course->id]]) !!}
-                                      {!! Form::submit('Delete', ['class' => 'btn btn-custom', 'style' => 'margin-top: -56px;margin-left: 120px;']) !!}
-                                {!! Form::close() !!}
-                            @endif
-                            
                         </div>
                         <div class="col-md-2">
                             
