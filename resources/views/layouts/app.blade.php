@@ -27,6 +27,7 @@
         .fa-btn {
             margin-right: 6px;
         }
+        
     </style>
 </head>
 <body id="app-layout">
@@ -57,7 +58,9 @@
                     <li><a href="#">Sub Menu5</a></li>
                 </ul>
             </li> -->
-            <!-- <li><a href="{{ url('/dashboard') }}">Dashboard</a></li> -->
+            @if(Auth::user()->user_role == 'admin')
+                <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
+            @endif
             <li><a href="{{ url('/mycourses') }}">My Courses</a></li>
             <li><a href="{{ url('/courses') }}">Browse Courses</a></li>
             <li><a href="{{ url('/profile') }}">Settings</a></li>

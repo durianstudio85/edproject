@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Course;
 use App\Lesson;
+use App\Enroll;
 use Auth;
 
 
@@ -27,7 +28,14 @@ class CourseController extends Controller
         $courses = Course::get();
         $user = Auth::User();  
         $user_role = $user->user_role;
-        return view('course.index', compact('courses', 'user_role'));
+        $id = $user->id;
+        $enroll = Enroll::where('user_id', '=', $id)->get();
+
+        foreach($enroll as $enrolls) {
+            $mycourse[] = $enrolls->course_id;
+        }
+         
+        return view('course.index', compact('courses', 'user_role', 'mycourse'));
     }
 
     /**
@@ -137,4 +145,6 @@ class CourseController extends Controller
         Course::destroy($id);
         return redirect('/courses');
     }
+
+    
 }

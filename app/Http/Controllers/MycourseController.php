@@ -6,8 +6,18 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Course;
+use App\Lesson;
+use App\User;
+use App\Enroll;
+use Auth;
+
 class MycourseController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +25,14 @@ class MycourseController extends Controller
      */
     public function index()
     {
-        //
+        $id = Auth::user()->id;
+        $enroll = Enroll::where('user_id', '=', $id)->get();
+        $items = array();
+        foreach($enroll as $enrolls) {
+            $items[] = $enrolls->course_id;
+        }
+        $courses = Course::whereIn('id', $items)->get();
+        return view('mycourse.index', compact('courses', 'id'));
     }
 
     /**
@@ -36,7 +53,8 @@ class MycourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Enroll::Create($request->all());
+        return redirect('/courses');
     }
 
     /**
@@ -83,4 +101,5 @@ class MycourseController extends Controller
     {
         //
     }
+
 }

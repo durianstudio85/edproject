@@ -48,3 +48,4 @@ Route::get('/dashboard', 'DashboardController@index' );
 
 //My course
 Route::get('/mycourses', 'MycourseController@index' );
+Route::post('/mycourses/create', 'MycourseController@store' );

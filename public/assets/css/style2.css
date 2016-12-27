@@ -144,9 +144,10 @@ body{
     border-radius: 1px;
 }
 
-.btn-default{
+.btn-default, .btn-danger{
     border-radius: 1px;  
 }
+
 
 .detailedlabel {
     font-size: 18px;
@@ -224,11 +225,11 @@ body{
     color: #51c4b7;
 }
 
-
-
 .pad-title{
     padding-left: 30px;
 }
+
+
 
 @media screen and (max-width: 1940px) {
     .header-all, .content-all{

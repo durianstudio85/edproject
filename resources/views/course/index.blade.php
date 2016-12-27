@@ -27,8 +27,22 @@
                         <div class="col-md-7 col-sm-7 content-description">
                             <a href="{{ url('/courses/'.$course->id) }}"  class="course-title"><h1>{{ $course->name }}</h1></a>
                             <p>{{ $course->description }}</p>
-                            <a href="{{ url('/courses/'.$course->id) }}" class="btn btn-custom">Enroll</a>&nbsp;
-                        </div>
+
+                            
+                            @if(in_array($course->id, $mycourse ))
+                                    <a href="#" class="btn btn-danger">Enrolled</a>
+                            @else
+                                {!! Form::open(['url'=>'mycourses/create']) !!}
+                                    {!! Form::hidden('course_id', $course->id); !!}
+                                    {!! Form::hidden('user_id', Auth::user()->id); !!}
+                                    {!! Form::submit('Enroll', ['class' => 'btn btn-custom']) !!}
+                                {!! Form::close() !!}
+                                
+                            @endif
+                                
+                            
+                            <!-- <a href="{{ url('/courses/'.$course->id) }}" class="btn btn-custom">Enroll</a>&nbsp; -->
+                        </div> 
                         <div class="col-md-2">
                             
                         </div>
