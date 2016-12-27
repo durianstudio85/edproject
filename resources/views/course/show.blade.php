@@ -61,7 +61,7 @@
                                     @if(in_array($course->id, $mycourse ))
                                         <td> <a class="link_lessons" href="{{ url('/lesson/'.$lessons->id) }}">{{ $lessons->title }}</a></td>
                                     @else
-                                        <td> <a class="link_lessons" href="#">{{ $lessons->title }}</a></td>
+                                        <td> <a class="link_lessons" href="#" data-toggle="modal" data-target="#myModal">{{ $lessons->title }}</a></td>
                                     @endif
                                     <td class="duration_size">{{ $lessons->duration }}</td>
                                 </tr>   
@@ -72,4 +72,25 @@
             </div>
         </div>
     </div>
+    <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <!-- <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  
+                </div> -->
+                
+                <div class="modal-body">
+                  <h4>you need to enroll first before viewing the lessons.</h4>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
 @endsection
