@@ -30,7 +30,7 @@ class CourseController extends Controller
         $user_role = $user->user_role;
         $id = $user->id;
         $enroll = Enroll::where('user_id', '=', $id)->get();
-
+        $mycourse[] = '';
         foreach($enroll as $enrolls) {
             $mycourse[] = $enrolls->course_id;
         }
