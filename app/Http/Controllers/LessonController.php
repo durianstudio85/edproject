@@ -8,6 +8,7 @@ use App\Http\Requests;
 
 use App\Course;
 use App\Lesson;
+use App\Enroll;
 use Auth;
 
 class LessonController extends Controller
@@ -62,7 +63,22 @@ class LessonController extends Controller
        $lesson = Lesson::findOrFail($id);
        $course = Course::findOrFail($lesson->courses_id);
        // $course = Course::where('id', '=', $lesson->courses_id)->get();
-       return view('lesson.show', compact('course','lesson'));
+
+        $user = Auth::User();  
+        $id = $user->id;
+        $enroll = Enroll::where('user_id', '=', $id)->get();
+        $mycourse[] = '';
+        foreach($enroll as $enrolls) {
+            $mycourse[] = $enrolls->course_id;
+        }
+
+        if(in_array($course->id, $mycourse )){
+            return view('lesson.show', compact('course','lesson'));
+        }else{
+            return redirect('/courses/'.$course->id);
+        }
+
+       
     }
 
     /**

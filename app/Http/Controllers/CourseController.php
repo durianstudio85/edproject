@@ -34,7 +34,6 @@ class CourseController extends Controller
         foreach($enroll as $enrolls) {
             $mycourse[] = $enrolls->course_id;
         }
-         
         return view('course.index', compact('courses', 'user_role', 'mycourse'));
     }
 
@@ -93,7 +92,15 @@ class CourseController extends Controller
         
         $course = Course::findOrFail($id);
         $lesson = Lesson::where('courses_id', '=', $course->id)->get();
-        return view('course.show', compact('course', 'lesson'));
+
+        $user = Auth::User();  
+        $id = $user->id;
+        $enroll = Enroll::where('user_id', '=', $id)->get();
+        $mycourse[] = '';
+        foreach($enroll as $enrolls) {
+            $mycourse[] = $enrolls->course_id;
+        }
+        return view('course.show', compact('course', 'lesson', 'mycourse'));
     }
 
     /**

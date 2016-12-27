@@ -37,7 +37,6 @@
                                     {!! Form::hidden('user_id', Auth::user()->id); !!}
                                     {!! Form::submit('Enroll', ['class' => 'btn btn-custom']) !!}
                                 {!! Form::close() !!}
-                                
                             @endif
                                 
                             

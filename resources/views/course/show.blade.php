@@ -33,7 +33,19 @@
                             <p class="detailedlabel">{{ $course->slug }}</p>
                             <p class="instructor_label">Category</p>
                             <br>
-                            <p><a href="#" class="btn btn-custom">Enroll</a></p>
+                            <p> 
+                                @if(in_array($course->id, $mycourse ))
+                                    <a href="#" class="btn btn-danger">Enrolled</a>
+                                @else
+                                    <center>
+                                       {!! Form::open(['url'=>'mycourses/create']) !!}
+                                            {!! Form::hidden('course_id', $course->id); !!}
+                                            {!! Form::hidden('user_id', Auth::user()->id); !!}
+                                            {!! Form::submit('Enroll', ['class' => 'btn btn-custom']) !!}
+                                        {!! Form::close() !!}
+                                    </center>
+                                @endif
+                            </p>
                         </div>
                    </div>
                    <div class="col-md-7 content_separator">
@@ -46,7 +58,11 @@
                             </thead>
                            @foreach($lesson as $lessons)
                                 <tr>
-                                    <td> <a class="link_lessons" href="{{ url('/lesson/'.$lessons->id) }}">{{ $lessons->title }}</td>
+                                    @if(in_array($course->id, $mycourse ))
+                                        <td> <a class="link_lessons" href="{{ url('/lesson/'.$lessons->id) }}">{{ $lessons->title }}</a></td>
+                                    @else
+                                        <td> <a class="link_lessons" href="#">{{ $lessons->title }}</a></td>
+                                    @endif
                                     <td class="duration_size">{{ $lessons->duration }}</td>
                                 </tr>   
                             @endforeach

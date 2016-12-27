@@ -53,8 +53,9 @@ class MycourseController extends Controller
      */
     public function store(Request $request)
     {
+        $id = $request->get('course_id');
         Enroll::Create($request->all());
-        return redirect('/courses');
+        return redirect('/courses/'.$id.'');
     }
 
     /**
