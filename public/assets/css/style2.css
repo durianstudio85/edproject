@@ -235,8 +235,9 @@ body{
 
 .course-list-box .course-list-box-single{
     float: left;
-    width: 25%;
-    margin-right: 37px;
+    width: 22%;
+    margin-right: 30px;
+    margin-bottom: 30px;
     border: 1px solid #f4f3f1;
 }
 
@@ -280,7 +281,7 @@ body{
 
 @media screen and (max-width: 1940px) {
     .header-all, .content-all{
-        width: 70%;
+        width: 73%;
     }
 
     .content-description{
@@ -318,6 +319,11 @@ body{
     }   
 }
 @media screen and (max-width: 1512px){
+    .header-all, .content-all {
+        width: 80%;
+    }
+
+
     .lesson-video{
         width: 80%;
         background-color: #000000;
@@ -331,6 +337,10 @@ body{
 }
 
 @media screen and (max-width: 1360px){
+    .header-all, .content-all {
+        width: 76%;
+    }
+
     .lesson-video{
         width: 78%;
         background-color: #000000;
@@ -342,7 +352,11 @@ body{
     }
 }
 
-@media screen and (max-width: 1360px){
+@media screen and (max-width: 1338px){
+    .header-all, .content-all {
+        width: 78%;
+    }
+
     .lesson-video{
         width: 75%;
         background-color: #000000;
