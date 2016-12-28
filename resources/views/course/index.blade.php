@@ -16,37 +16,28 @@
             <div class="col-md-10 col-sm-5 content-all">
                 <h1 class="pad-title">Courses </h1>
                 <hr>
-                @foreach($courses as $course)
-                    <div class="row course-list">
-                        <div class="col-md-2 col-sm-2">
-                            <center>
-                                <img src="{{ asset('upload/'.$course->photo) }}" class="course-img" />
-                                <!-- <img src="{{ asset('assets/images/laravel5.2.png') }}" class="course-img"> -->
-                            </center>
+                <div class="row course-list-box">
+                    @foreach($courses as $course)
+                        <div class="course-list-box-single">
+                            <div class="course-box-img">
+                                <img src="{{ asset('upload/'.$course->photo) }}"/><!-- <img src="{{ asset('assets/images/laravel5.2.png') }}" class="course-img"> -->
+                            </div>
+                            <div class="course-box-content">
+                                <a href="{{ url('/courses/'.$course->id) }}">{{ $course->name }}</a>
+                                <p>By {{ $course->instructor_name }}</p>
+                            </div>
+                            <div class="course-box-status">
+                                <div class="course-box-status-user-count">
+                                    <i class="fa fa-users fa-lg" aria-hidden="true"></i>&nbsp;
+                                        {{ App\Enroll::where('course_id','=',$course->id)->count() }}
+                                </div>
+                                <div class="course-box-status-price">
+                                    <p>FREE</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-7 col-sm-7 content-description">
-                            <a href="{{ url('/courses/'.$course->id) }}"  class="course-title"><h1>{{ $course->name }}</h1></a>
-                            <p>{{ $course->description }}</p>
-
-                            
-                            @if(in_array($course->id, $mycourse ))
-                                    <a href="#" class="btn btn-danger">Enrolled</a>
-                            @else
-                                {!! Form::open(['url'=>'mycourses/create']) !!}
-                                    {!! Form::hidden('course_id', $course->id); !!}
-                                    {!! Form::hidden('user_id', Auth::user()->id); !!}
-                                    {!! Form::submit('Enroll', ['class' => 'btn btn-custom']) !!}
-                                {!! Form::close() !!}
-                            @endif
-                                
-                            
-                            <!-- <a href="{{ url('/courses/'.$course->id) }}" class="btn btn-custom">Enroll</a>&nbsp; -->
-                        </div> 
-                        <div class="col-md-2">
-                            
-                        </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>

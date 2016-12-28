@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Enroll;
 
 class Course extends Model
 {
@@ -25,4 +26,7 @@ class Course extends Model
     {
     	return $this->belongsToMany('App\User');
     }	
+
+
+    
 }

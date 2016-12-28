@@ -229,6 +229,53 @@ body{
     padding-left: 30px;
 }
 
+.course-list-box{
+    padding-left: 50px;
+}
+
+.course-list-box .course-list-box-single{
+    float: left;
+    width: 25%;
+    margin-right: 37px;
+    border: 1px solid #f4f3f1;
+}
+
+.course-list-box-single .course-box-img img{
+    width: 100%;
+    height: 165px;
+    position: inherit;
+}
+
+.course-list-box-single .course-box-content{
+    padding: 8px;
+    height: 100px;
+}
+
+.course-list-box-single .course-box-content a{
+    font-size: 20px;
+    color: #333333;
+}
+
+.course-list-box-single .course-box-content p{
+    color: #757575;
+}
+
+.course-list-box-single .course-box-status{
+    padding: 8px;
+}
+
+.course-list-box-single .course-box-status .course-box-status-user-count{
+    float: left;
+}
+
+.course-list-box-single .course-box-status .course-box-status-price{
+    float: right;
+}
+
+.course-list-box-single .course-box-status .course-box-status-price p{
+    font-weight: bold;
+}
+
 
 
 @media screen and (max-width: 1940px) {
