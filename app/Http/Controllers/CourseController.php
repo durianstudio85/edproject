@@ -151,13 +151,33 @@ class CourseController extends Controller
     {
         $course = Course::findOrFail($id);
         $slug = str_slug($request->get('name'), '_');
+        // Course Images
+        $photo = $request->file('photo');
+        if (isset($photo)) {
+            $filename = str_random(20).$photo->getClientOriginalName();
+            $photo->move(public_path().'/upload',$filename);
+        }else{
+            $filename = $course->photo;
+        }
+        // instructor Details
+        $instructor_img = $request->file('instructor_img');
+        if (isset($instructor_img)) {
+            $instructor_filename = str_random(20).$photo->getClientOriginalName();
+            $instructor_img->move(public_path().'/upload',$instructor_filename);
+        }else{
+            $instructor_filename = $course->instructor_img;
+        }
+            
         $data = [
             'name' => $request->get('name'),
             'slug' => $slug,
             'description' => $request->get('description'),
+            'photo' => $filename,
+            'instructor_name' => $request->get('instructor_name'),
+            'instructor_img' => $instructor_filename,
         ];
         $course->update($data);
-        return redirect('/');
+        return redirect('/courses/'.$id.'/edit');
     }
 
     /**
