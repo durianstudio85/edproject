@@ -12,13 +12,91 @@ body{
 /*body background*/
 .indexbg{
 	background-image: url("../images/background.jpg");
-	background-size: 1920px 1280px;
-	max-height: 1920px;
-	width: 100%;
+	background-size: 1925px 1280px;
+    max-height: 1991px;
+    width: 100%;
+    height: 1279px;
+    margin-top: 0px;
+    background-repeat: no-repeat;
+    padding-top: 1px;
 }
+
+.course-section h1{
+	font-family: "DKCrayonCrumble";
+    font-size: 62px;
+    color: #51c4b7;
+}
+.course-list-box-single{
+	padding: 0px 5px;
+    margin-bottom: 10px;
+
+}
+
+.course-list-box-border{
+	border: 1px solid #f4f3f1;
+	height: 300px;
+}
+
+.course-box-img img{
+	width: 100%;
+    height: 165px;
+    position: inherit;
+}
+
+.course-box-content{
+	padding: 8px;
+    height: 100px;
+}
+
+.course-box-status{
+	padding: 8px;
+}
+
+.course-box-content a{
+	font-size: 20px;
+    color: #333333;
+}
+
+.course-box-content p{
+	color: #757575;
+}
+
+
+.course-box-status-user-count{
+	float: left;
+}
+
+.course-box-status-price{
+	float: right;
+}
+
+.btn-browse-course{
+	background-color: #51c4b7;
+    border: 1px solid #51c4b7;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0px 5px;
+}
+
 .signupbg{
 	background-image: url("../images/background2.png");
+	height: 1500px;
 }
+
+
+.signin-btn{
+	color: #51c4b7;
+}
+
+.signin-btn:hover{
+	text-decoration: none;
+	color: #51c4b7;
+}
+
+
 
 
 /*body background*/
@@ -765,7 +843,25 @@ body{
 
 /* footer */
 .foot{
-	margin-top: 550px;
+	/*margin-top: 550px;*/
+	background-color: #333333;
+    color: #ffffff;
+    margin-top: 30px;
+    padding: 5px
+}
+
+.foot-nav{
+	margin-left: -38px;
+}
+
+.foot-nav li{
+	list-style-type: none;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.foot-nav li a{
+	color: #ffffff;
 }
 
 		/* social-icon */
@@ -779,15 +875,48 @@ body{
 	.social-icon ul li a i{
 		 text-transform: none;
 		 text-decoration: none;
-		 color:#323e48;
+		 color:#ffffff;
 		 font-size: 28px;
 		 padding:0px 18px 0px 0px;
 
 	}
 
+.btn-custom-login{
+	background-color: #51c4b7 !important;
+    border: 1px solid #51c4b7 !important;
+    color: #ffffff !important;
+    padding: 0px 60px !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+    margin-top: 10px;
+}
 
+.btn-twitter{
+	background-color: #00bff3;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 9px;
+    font-size: 20px;
+    margin-right: 15px;
 
+}
+.btn-twitter:hover{
+	text-decoration: none;
+	color: #ffffff;
+}
 
+.btn-facebook{
+	background-color: #3a5896;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 9px;
+    font-size: 20px;
+
+}
+.btn-facebook:hover{
+	text-decoration: none;
+	color: #ffffff;
+}
 
 
 

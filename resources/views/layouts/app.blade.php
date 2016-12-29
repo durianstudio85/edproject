@@ -34,7 +34,7 @@
     <div class="navbar navbar-inverse navbar-fixed-left">
         <div class="nav-header">
             <center>
-                <a class="navbar-brand" href="#"><img src="{{ asset('assets/images/logo1.png') }}"></a>
+                <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('assets/images/logo1.png') }}"></a>
             </center>
             <div class="user">
                 <center>

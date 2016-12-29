@@ -30,30 +30,7 @@ class CourseController extends Controller
         $mycourse = Enroll::get();
         $user = Auth::User();  
         $user_role = $user->user_role;
-        $id = $user->id;
-        // $enroll = Enroll::where('user_id', '=', $id)->get();
-        // $mycourse[] = '';
-        // foreach($enroll as $enrolls) {
-        //     $mycourse[] = $enrolls->course_id;
-        // }
-
-
-
-
-        // foreach ($courses as $courses_count) {
-        //     $course_id = $courses_count->id;
-        //     $course_count = Enroll::where('course_id','=',$course_id)->count();
-        //     $courses->count = $course_count;
-        // }
-
-       
-        
-        // $courses[] = array_add($courses, 'counted', '1');
-        $mycourse = Enroll::find(1);
-
-
-        $count = Enroll::where('course_id','=','1')->count();
-        return view('course.index', compact('courses', 'user_role', 'mycourse', 'count'));
+        return view('course.index', compact('courses', 'user_role'));
     }
 
     /**

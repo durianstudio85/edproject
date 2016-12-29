@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
+use App\Course;
+use App\Enroll;
+use Auth;
+
 class HomeController extends Controller
 {
     /**
@@ -24,6 +28,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $courses = Course::get();
+        $mycourse = Enroll::get();
+        return view('index', compact('courses'));
     }
 }
