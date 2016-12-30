@@ -20,7 +20,7 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <i class="fa fa-list"></i>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{{ url('/') }}">
                     <div class="logo"><img src="{{ asset('assets/images/logo.png') }}"></div>
                 </a>
             </div>

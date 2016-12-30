@@ -113,6 +113,7 @@ body{
 			 display: inline;
 			 list-style: none;
 			 margin-top: 10px;
+			 margin-right: 20px;
 		}
 		.header-menu ul li a{
 			 text-transform: none;
@@ -840,6 +841,9 @@ body{
 
 /*sidebar*/
 
+.copyright{
+	padding: 10px;
+}
 
 
 
@@ -879,7 +883,7 @@ body{
 		 text-transform: none;
 		 text-decoration: none;
 		 color:#ffffff;
-		 font-size: 28px;
+		 font-size: 20px;
 		 padding:0px 18px 0px 0px;
 
 	}

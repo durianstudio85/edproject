@@ -100,10 +100,7 @@
 		<section class="navbar-static-bottom">
 	      <div class="container">
 	        <div class="col-md-6 copyright">
-	        	<ul class="foot-nav">
-	        		<li><a href="#">About Us</a></li>
-	        		<li><a href="#">Contact Us</a></li>
-	        	</ul>
+	        	
 	          	<p>Copyright  2017 @edproject. All rights reserved </p>
 	        </div>
 	        <nav class="col-md-6 social-icon">
