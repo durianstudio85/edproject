@@ -39,6 +39,7 @@
             <div class="user">
                 <center>
                     <img src="{{ asset('assets/images/userpic.png') }}" width="200" height="200" alt="" class="avatar avatar-200 wp-user-avatar wp-user-avatar-200 photo avatar-default">
+                    
                     <br><br>
                     <h3>{{ Auth::user()->name }}</h3>
                 </center>

@@ -10,6 +10,11 @@ body{
 	overflow-x: hidden;
 }
 /*body background*/
+
+.logo{
+    margin-top: -18px;
+}
+
 .indexbg{
 	background: url(../images/background.jpg) no-repeat center center;
     background-size: 1925px 1280px;
