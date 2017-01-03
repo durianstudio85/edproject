@@ -11,7 +11,7 @@ body{
 }
 /*body background*/
 .indexbg{
-	background: url(../images/background.jpg) no-repeat center center fixed;
+	background: url(../images/background.jpg) no-repeat center center;
     background-size: 1925px 1280px;
     max-height: 1991px;
     width: 100%;

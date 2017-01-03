@@ -79,7 +79,7 @@
                         <h1>You can sign in with popular social networks account</h1><br>
 
                         <a href="#" class="btn-twitter"><i class="fa fa-twitter fa-lg"></i>&nbsp;Sign In with Twitter</a>
-                        <a href="#" class="btn-facebook"><i class="fa fa-facebook"></i>&nbsp;Sign In with Facebook</a>
+                        <a href="redirect" class="btn-facebook"><i class="fa fa-facebook"></i>&nbsp;Sign In with Facebook</a>
                         <br>
                         <br>
                         <br>

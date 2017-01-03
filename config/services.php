@@ -35,4 +35,10 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'facebook' => [
+        'client_id' => '1284863648239905',
+        'client_secret' => 'a97964d1e8c9ac0e7264b4427b4f1755',
+        'redirect' => 'http://localhost/github/laravel/edproject/public/callback',
+    ],
+
 ];
