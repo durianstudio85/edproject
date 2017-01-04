@@ -66,13 +66,14 @@ class LessonController extends Controller
 
         $user = Auth::User();  
         $id = $user->id;
+        $user_role = $user->user_role;
         $enroll = Enroll::where('user_id', '=', $id)->get();
         $mycourse[] = '';
         foreach($enroll as $enrolls) {
             $mycourse[] = $enrolls->course_id;
         }
 
-        if(in_array($course->id, $mycourse )){
+        if(in_array($course->id, $mycourse ) || $user_role == 'admin'){
             return view('lesson.show', compact('course','lesson'));
         }else{
             return redirect('/courses/'.$course->id);

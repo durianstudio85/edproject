@@ -17,6 +17,8 @@
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }} ">
     <link href="{{ asset('assets/css/style2.css') }}" rel="stylesheet">
 
     <style>
@@ -77,6 +79,24 @@
 
 
     <!-- JavaScripts -->
+    <footer class="foot">
+        <section class="navbar-static-bottom">
+          <div class="container">
+            <div class="col-md-6 copyright">
+                
+                <p>Copyright  2017 @edproject. All rights reserved </p>
+            </div>
+            <nav class="col-md-6 social-icon">
+                <ul class="navbar-right">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-feed"></i></a></li>
+                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </nav>
+          </div>
+        </section>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
