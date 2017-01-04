@@ -92,6 +92,9 @@ body{
 .signupbg{
 	background-image: url("../images/background2.png");
 	height: 1500px;
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow-x: hidden;
 }
 
 
@@ -858,7 +861,6 @@ body{
 	/*margin-top: 550px;*/
 	background-color: #333333;
     color: #ffffff;
-    margin-top: 30px;
     padding: 5px
 }
 
