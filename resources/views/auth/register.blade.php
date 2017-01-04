@@ -125,23 +125,23 @@
             </div>
         </section>
     </div>
-<footer class="foot wth">
-    <section class="navbar-static-bottom">
-      <div class="container">
-        <div class="col-md-6 copyright">       
-            <p>Copyright  2014 @edproject. All rights reserved </p>
-        </div>
-        <nav class="col-md-6 social-icon">
-            <ul class="navbar-right">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-feed"></i></a></li>
-                <li><a href="#"><i class="fa fa-github"></i></a></li>
-            </ul>
-        </nav>
-      </div>
-    </section>
-</footer>
+    <footer class="foot wth">
+        <section class="navbar-static-bottom">
+          <div class="container">
+            <div class="col-md-6 copyright">       
+                <p>Copyright  2014 @edproject. All rights reserved </p>
+            </div>
+            <nav class="col-md-6 social-icon">
+                <ul class="navbar-right">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-feed"></i></a></li>
+                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                </ul>
+            </nav>
+          </div>
+        </section>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/script.js') }}"></script>

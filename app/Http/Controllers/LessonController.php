@@ -63,6 +63,23 @@ class LessonController extends Controller
        $lesson = Lesson::findOrFail($id);
        $course = Course::findOrFail($lesson->courses_id);
        // $course = Course::where('id', '=', $lesson->courses_id)->get();
+       $previous_first = Lesson::where('courses_id', '=', $course->id)->first();
+       $next_last = Lesson::where('courses_id', '=', $course->id)->orderBy('id','desc')->first();
+
+        // get previous user id
+        $previous = Lesson::where('id', '<', $lesson->id)->max('id');
+
+        // get next user id
+        $next = Lesson::where('id', '>', $lesson->id)->min('id');
+
+
+        if ($previous_first->id == $id) {
+            $previous = "";
+        }
+
+        if ($next_last->id == $id) {
+            $next = "";
+        }
 
         $user = Auth::User();  
         $id = $user->id;
@@ -74,7 +91,7 @@ class LessonController extends Controller
         }
 
         if(in_array($course->id, $mycourse ) || $user_role == 'admin'){
-            return view('lesson.show', compact('course','lesson'));
+            return view('lesson.show', compact('course','lesson','someUsers', 'previous', 'next', 'next_last'));
         }else{
             return redirect('/courses/'.$course->id);
         }

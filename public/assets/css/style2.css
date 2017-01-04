@@ -60,7 +60,7 @@ body{
 }
 
 .navbar-nav{
-    min-height: calc(100vh - 70px);
+    min-height: 271vh;
 }
 
 .navbar-inverse .navbar-brand {
@@ -212,13 +212,37 @@ body{
     font-size: 18px;
     font-weight: bold;
     color: #54575a;
-    padding-Bottom: 20px;
+    padding-bottom: 20px;
+    float: left;
 }
 
 .lesson_title{
     color: #51534a!important;
     font-weight: bold;
     text-align: left;
+    width: 80%;
+    float: left;
+}
+
+
+
+.btn-previous, .btn-previous:hover{
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 8px 16px;
+}
+
+.btn-next, .btn-next:hover{
+    background-color: #e5e2e7;
+    border: 1px solid #e5e2e7;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 8px 16px;
+    color: #666666;
+}
+
+.button-prev-next{
+    padding-top: 20px;
 }
 
 .course-title, .course-title:hover{
@@ -280,6 +304,10 @@ body{
 .description-link iframe{
     width: 100% !important;
     height: 470px !important;
+}
+
+.content-table{
+    padding-left: 30px;
 }
 
 /* footer */

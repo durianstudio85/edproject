@@ -28,6 +28,19 @@
                    </div>
                    <div class="col-md-7 content_separator">
                         <h1 class="lesson_title">{{ $lesson->title }}</h1>
+                        <div class="button-prev-next">
+                            @if(empty($previous))
+                                <a class="btn btn-custom btn-previous disabled" href="#">Previous</a>    
+                            @else
+                                <a class="btn btn-custom btn-previous" href="{{ url('/lesson/'.$previous)}}">Previous</a>
+                            @endif
+                            
+                            @if(empty($next))
+                                <a class="btn btn-custom btn-next disabled" href="#">Next</a>
+                            @else
+                                <a class="btn btn-custom btn-next" href="{{ url('/lesson/'.$next)}}">Next</a>
+                            @endif
+                        </div>
                         <p class="lesson_description">{{ $lesson->short_description }}</p>
                         <div id="disqus_thread"></div>
                         <script type="text/javascript">

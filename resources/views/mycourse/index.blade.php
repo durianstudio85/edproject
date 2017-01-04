@@ -18,28 +18,29 @@
                 <h1 class="pad-title">My Courses
                     &nbsp;<a href="{{ url('/courses/') }}" class="btn btn-custom">Browse Course</a>
                 </h1>
-
-                <hr>
-                <table class="table">
-                    <thead>
-                        <th>Name</th>
-                        <th>Author</th>
-                        <th>No. Lesson</th>
-                        <th>Action</th>
-                    </thead>
-                    <tbody>
-                        @foreach($courses as $course)
-                            <tr>
-                                <td>{{ $course->name }}</td>
-                                <td>{{ $course->instructor_name }}</td>
-                                <td>{{ str_limit($course->description, $limit = 80, $end = '...') }}</td>
-                                <td>
-                                    
-                                    <a href="{{ url('/courses/'.$course->id) }}" class="btn btn-custom">View</a></td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                <div class="content-table">
+                    <hr>
+                    <table class="table">
+                        <thead>
+                            <th>Name</th>
+                            <th>Author</th>
+                            <th>No. Lesson</th>
+                            <th>Action</th>
+                        </thead>
+                        <tbody>
+                            @foreach($courses as $course)
+                                <tr>
+                                    <td>{{ $course->name }}</td>
+                                    <td>{{ $course->instructor_name }}</td>
+                                    <td>{{ str_limit($course->description, $limit = 80, $end = '...') }}</td>
+                                    <td>
+                                        
+                                        <a href="{{ url('/courses/'.$course->id) }}" class="btn btn-custom">View</a></td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
