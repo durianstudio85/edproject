@@ -864,6 +864,10 @@ body{
     padding: 5px
 }
 
+.foot-front{
+	margin-top: 30px;
+}
+
 .foot-nav{
 	margin-left: -38px;
 }

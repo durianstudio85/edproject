@@ -165,6 +165,7 @@ body{
 .content_separator{
     border-left: 3px solid #dddddd;
     padding-left: 15px;
+    margin-bottom: 15px;
 }
 
 .img-circle img{
@@ -182,6 +183,7 @@ body{
 }
 .duration_size{
     font-size: 18px;  
+    text-align: right;
 }
 
 .course-header{
@@ -273,6 +275,11 @@ body{
 
 .course-list-box-single .course-box-status .course-box-status-price p{
     font-weight: bold;
+}
+
+.description-link iframe{
+    width: 100% !important;
+    height: 470px !important;
 }
 
 /* footer */

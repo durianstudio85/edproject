@@ -87,6 +87,7 @@ class CourseController extends Controller
     {
         
         $course = Course::findOrFail($id);
+        $introduction = Lesson::where('courses_id', '=', $course->id)->first();
         $lesson = Lesson::where('courses_id', '=', $course->id)->get();
 
         $user = Auth::User();  
@@ -96,7 +97,7 @@ class CourseController extends Controller
         foreach($enroll as $enrolls) {
             $mycourse[] = $enrolls->course_id;
         }
-        return view('course.show', compact('course', 'lesson', 'mycourse'));
+        return view('course.show', compact('course', 'lesson', 'mycourse', 'introduction'));
     }
 
     /**

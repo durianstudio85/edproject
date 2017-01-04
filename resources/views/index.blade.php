@@ -96,7 +96,7 @@
 			</div>
 		</div>
 	</div>
-	<footer class="foot">
+	<footer class="foot foot-front">
 		<section class="navbar-static-bottom">
 	      <div class="container">
 	        <div class="col-md-6 copyright">

@@ -49,12 +49,13 @@
                         </div>
                    </div>
                    <div class="col-md-7 content_separator">
+                        <p class="description-link">{!! $introduction->link !!}</p>
                         <p>{{ $course->description }}</p>
                         <!-- <a href="{{ url('/course/'.$course->id.'/lesson/create') }}" class="btn btn-custom">Add Lesson</a> -->
                         <table class="table table-custom">
                             <thead>
-                                <th style="width: 85%">&nbsp;</th>
-                                <th style="width: 15%">&nbsp;</th>
+                                <th style="width: 90%">&nbsp;</th>
+                                <th>&nbsp;</th>
                             </thead>
                            @foreach($lesson as $lessons)
                                 <tr>
