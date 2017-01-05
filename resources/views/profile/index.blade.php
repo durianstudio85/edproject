@@ -45,6 +45,16 @@
                         <td><strong>Biography:</strong></td>
                         <td>{{ Auth::user()->biography }}</td>
                     </tr>
+                    <tr>
+                        <td><strong>Images:</strong></td>
+                        <td>
+                            @if ( !empty(Auth::user()->avatar) )
+                                <img id="user-avatar-upload" src="{{ Auth::user()->avatar }}" width="200" height="200" alt="">
+                            @else
+                                <img id="user-avatar-upload" src="{{ asset('upload/user.jpg') }}" width="200" height="200" alt="">
+                            @endif
+                        </td>
+                    </tr>
                 </table>
                 <h3 style="color: #01ba8e; font-weight: bold;">Social Media</h3>
                 <hr style="border-top: 2px solid #eee;">
