@@ -60,7 +60,7 @@ body{
 }
 
 .navbar-nav{
-    min-height: 271vh;
+    /*min-height: 271vh;*/
 }
 
 .navbar-inverse .navbar-brand {

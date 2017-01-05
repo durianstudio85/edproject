@@ -21,6 +21,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }} ">
     <link href="{{ asset('assets/css/style2.css') }}" rel="stylesheet">
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <style>
         body {
             font-family: 'Lato';
@@ -31,12 +34,24 @@
         }
         
     </style>
+    <script>
+        $(document).ready(function() {
+            // $(".navbar-nav").height();
+            $(".navbar-nav").height( $( ".content-all" ).height() );
+            // $(".navbar-brand").click(function(){
+            //     alert("Height of div: " + $(".content-all").height());
+            // });
+        });
+    </script>
+
+
 </head>
 <body id="app-layout">
     <div class="navbar navbar-inverse navbar-fixed-left">
         <div class="nav-header">
             <center>
-                <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('assets/images/logo1.png') }}"></a>
+                <a class="navbar-brand" href="#"><img src="{{ asset('assets/images/logo1.png') }}"></a>
+                <!-- {{ url('/') }} -->
             </center>
             <div class="user">
                 <center>
@@ -97,6 +112,8 @@
           </div>
         </section>
     </footer>
+    
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
