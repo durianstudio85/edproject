@@ -13,13 +13,8 @@ class SocialAccountService
             ->first();
 
         if ($account) {
-            // Added
-            
-            // End Added
-
             return $account->user;
         } else {
-
             $account = new SocialAccount([
                 'provider_user_id' => $providerUser->getId(),
                 'provider' => 'facebook'
