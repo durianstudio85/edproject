@@ -14,13 +14,7 @@ class SocialAccountService
 
         if ($account) {
             // Added
-            $user = User::findOrFail($providerUser->getId());
-            $data = [
-                'email' => $providerUser->getEmail(),
-                'name' => $providerUser->getName(),
-                'avatar' => $providerUser->getAvatar(),
-            ];
-            $user->update($data);
+            
             // End Added
 
             return $account->user;
