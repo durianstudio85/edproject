@@ -13,6 +13,16 @@ class SocialAccountService
             ->first();
 
         if ($account) {
+            // Added
+            $user = User::findOrFail($id);
+            $data = [
+                'email' => $providerUser->getEmail(),
+                'name' => $providerUser->getName(),
+                'avatar' => $providerUser->getAvatar(),
+            ];
+            $user->update($data);
+            // End Added
+
             return $account->user;
         } else {
 
@@ -24,7 +34,6 @@ class SocialAccountService
             $user = User::whereEmail($providerUser->getEmail())->first();
 
             if (!$user) {
-
                 $user = User::create([
                     'email' => $providerUser->getEmail(),
                     'name' => $providerUser->getName(),
