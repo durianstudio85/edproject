@@ -311,6 +311,15 @@ body{
     padding-left: 0px;
 }
 
+.user-avatar img{
+     border-radius: 50%;
+}
+
+img#user-avatar-upload{
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
 /* footer */
 .foot{
     /*margin-top: 550px;*/

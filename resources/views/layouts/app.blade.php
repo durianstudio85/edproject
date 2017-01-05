@@ -64,7 +64,13 @@
             </center>
             <div class="user">
                 <center>
-                    <img src="{{ Auth::user()->avatar }}" width="200" height="200" alt="" class="avatar avatar-200 wp-user-avatar wp-user-avatar-200 photo avatar-default">
+                    <div class="user-avatar">
+                        @if ( !empty(Auth::user()->avatar) )
+                            <img src="{{ Auth::user()->avatar }}" width="200" height="200" alt="">
+                        @else
+                            <img src="{{ asset('upload/user.jpg') }}" width="200" height="200" alt="">
+                        @endif
+                    </div>
                     <br><br>
                     <h3>{{ Auth::user()->name }}</h3>
                 </center>
@@ -120,7 +126,6 @@
           </div>
         </section>
     </footer>
-    
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

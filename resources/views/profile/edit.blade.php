@@ -17,7 +17,7 @@
             <div class="col-md-10 content-all">
                 <h3 style="color: #01ba8e; font-weight: bold;">Basic Information </h3>
                 <hr style="border-top: 2px solid #eee;">
-                {!! Form::model($user, ['method'=>'patch', 'action'=>['ProfileController@update', $user->id]]) !!}
+                {!! Form::model($user, ['method'=>'patch', 'action'=>['ProfileController@update', $user->id], 'files'=>'true']) !!}
                 <table class="table table-profile-content">
                  <div class="form-group">    
                     <tr>
@@ -48,6 +48,17 @@
                     <tr>
                         <td><strong>Biography:</strong></td>
                         <td>{!! Form::textarea('biography', $user->boigraphy,['class'=>'form-control', 'placeholder'=>'Title']) !!}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Images:</strong></td>
+                        <td>
+                            @if ( !empty(Auth::user()->avatar) )
+                                <img id="user-avatar-upload" src="{{ Auth::user()->avatar }}" width="200" height="200" alt="">
+                            @else
+                                <img id="user-avatar-upload" src="{{ asset('upload/user.jpg') }}" width="200" height="200" alt="">
+                            @endif
+                            {!! Form::file('avatar', ['class' => 'form-control']) !!}
+                        </td>
                     </tr>
                 </div>
                 </table>

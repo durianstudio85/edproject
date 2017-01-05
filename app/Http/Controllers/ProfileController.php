@@ -82,7 +82,29 @@ class ProfileController extends Controller
     {
         $id = Auth::user()->id;
         $user = User::findOrFail($id);
-        $user->update($request->all());
+        $url_link = 'https://theedproject.org/upload/';
+
+        $url_link2 = 'http://localhost/github/laravel/edproject/public/upload/';
+
+
+        $avatar_img = $request->file('avatar');
+        if (isset($avatar_img)) {
+            $avatar_filename = str_random(20).$avatar_img->getClientOriginalName();
+            $avatar_img->move(public_path().'/upload',$avatar_filename);
+        }else{
+            $avatar_filename = $user->avatar;
+        }
+
+        $data = [
+            'name' => $request->get('name'),
+            'job_title' => $request->get('job_title'),
+            'address' => $request->get('address'),
+            'email' => $request->get('email'),
+            'phone' => $request->get('phone'),
+            'biography' => $request->get('biography'),
+            'avatar' => $url_link.$avatar_filename,
+        ];
+        $user->update($data);
         return redirect('/profile');
     }
 
