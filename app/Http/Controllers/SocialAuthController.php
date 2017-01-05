@@ -22,14 +22,6 @@ class SocialAuthController extends Controller
         $user = $service->createOrGetUser(Socialite::driver('facebook')->user());    
     	auth()->login($user);
 
-        $userEdited = User::findOrFail(4);
-        $data = [
-            'email' => $providerUser->getEmail(),
-            'name' => $providerUser->getName(),
-            'avatar' => $providerUser->getAvatar(),
-        ];
-        $userEdited->update($data);
-
     	return redirect()->to('/courses');	
         
     }
