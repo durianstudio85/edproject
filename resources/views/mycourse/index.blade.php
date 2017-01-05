@@ -24,7 +24,7 @@
                         <thead>
                             <th>Name</th>
                             <th>Author</th>
-                            <th>No. Lesson</th>
+                            <th>Description</th>
                             <th>Action</th>
                         </thead>
                         <tbody>

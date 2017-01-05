@@ -60,7 +60,7 @@ body{
 }
 
 .navbar-nav{
-    /*min-height: 271vh;*/
+    height: 500px;
 }
 
 .navbar-inverse .navbar-brand {
@@ -250,11 +250,12 @@ body{
 }
 
 .pad-title{
-    padding-left: 30px;
+    padding-left: 0px;
 }
 
-.course-list-box{
-    padding-left: 50px;
+
+.course-list-box {
+    padding-left: 14px;
 }
 
 .course-list-box .course-list-box-single{
@@ -307,7 +308,7 @@ body{
 }
 
 .content-table{
-    padding-left: 30px;
+    padding-left: 0px;
 }
 
 /* footer */
@@ -355,6 +356,10 @@ body{
 }
 
 
+.content-all{
+    padding-left: 30px;
+}
+
 @media screen and (max-width: 1940px) {
     .header-all, .content-all{
         width: 73%;
@@ -393,6 +398,10 @@ body{
         background-color: #000000;
         text-align: center;
     }   
+
+    .lesson_title {
+        width: 70%;
+    }
 }
 @media screen and (max-width: 1512px){
     .header-all, .content-all {
@@ -426,6 +435,10 @@ body{
     .lesson-video iframe{
         width: 100%;
     }
+
+    .lesson_title {
+        width: 76%;
+    }
 }
 
 @media screen and (max-width: 1338px){
@@ -442,6 +455,10 @@ body{
     .lesson-video iframe{
         width: 100%;
     }
+
+    .lesson_title {
+        width: 70%;
+    }
 }
 /*@media screen and (max-width: 1619px){
     .header-all{
@@ -454,6 +471,10 @@ body{
         width: 66%;
         margin-left: 110px;
     }
+
+    .lesson_title {
+        width: 68%;
+    }
 }
 
 @media screen and (max-width: 1076px){
@@ -465,5 +486,9 @@ body{
 
     .lesson-video iframe{
         width: 100%;
+    }
+
+    .lesson_title {
+        width: 65%;
     }
 }

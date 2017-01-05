@@ -37,7 +37,16 @@
     <script>
         $(document).ready(function() {
             // $(".navbar-nav").height();
-            $(".navbar-nav").height( $( ".content-all" ).height() );
+
+            if ($( ".lesson-video" ).height() > 1) {
+                $(".navbar-nav").height( $( ".content-all" ).height() + $( ".lesson-video" ).height());
+            };
+
+
+            if ($( ".content-all" ).height() > 500){
+                $(".navbar-nav").height( $( ".content-all" ).height());
+            };
+            
             // $(".navbar-brand").click(function(){
             //     alert("Height of div: " + $(".content-all").height());
             // });
@@ -55,6 +64,7 @@
             </center>
             <div class="user">
                 <center>
+                    {{ Auth::user()->avatar }}
                     <img src="{{ asset('assets/images/userpic.png') }}" width="200" height="200" alt="" class="avatar avatar-200 wp-user-avatar wp-user-avatar-200 photo avatar-default">
                     
                     <br><br>

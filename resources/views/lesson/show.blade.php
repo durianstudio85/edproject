@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="row">
-        <div class="header-section">
-            <div class="row">
+        <div class="header-section ">
+            <div class="row get-height">
                 <div class="col-md-10 lesson-video">
                     {!! $lesson->link !!}
                 </div>
