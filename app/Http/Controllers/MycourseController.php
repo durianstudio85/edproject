@@ -10,6 +10,7 @@ use App\Course;
 use App\Lesson;
 use App\User;
 use App\Enroll;
+use App\Complete;
 use Auth;
 
 class MycourseController extends Controller
@@ -26,10 +27,6 @@ class MycourseController extends Controller
     public function index()
     {
 
-        
-
-
-
         $id = Auth::user()->id;
         $enroll = Enroll::where('user_id', '=', $id)->get();
         $items = array();
@@ -38,10 +35,17 @@ class MycourseController extends Controller
         }
         $courses = Course::whereIn('id', $items)->get();
 
-        foreach ($courses as $get_duration) {
-            $duration[$get_duration->id] = $this->duration($get_duration->id) ;   
+        foreach ($courses as $get_course) {
+            $duration[$get_course->id] = $this->duration($get_course->id) ;   
+
+            $noLessons = Lesson::where('courses_id','=',$get_course->id)->count();
+            $complete = Complete::where('courses_id', '=', $get_course->id)->where('users_id', '=', $id)->count();
+
+            $progress[$get_course->id] = number_format((100 / $noLessons) * $complete, 2, '.', ','); 
+
         }
-        return view('mycourse.index', compact('courses', 'id', 'duration'));
+        
+        return view('mycourse.index', compact('courses', 'id', 'duration', 'progress'));
     }
 
     /**

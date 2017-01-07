@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Course;
 use App\Lesson;
 use App\Enroll;
+use App\Complete;
 use Auth;
 
 class LessonController extends Controller
@@ -72,14 +73,16 @@ class LessonController extends Controller
         // get next user id
         $next = Lesson::where('id', '>', $lesson->id)->min('id');
 
-
+        // Pagination Button
         if ($previous_first->id == $id) {
             $previous = "";
         }
 
+        // Pagination Button
         if ($next_last->id == $id) {
             $next = "";
         }
+
 
         $user = Auth::User();  
         $id = $user->id;
@@ -90,8 +93,10 @@ class LessonController extends Controller
             $mycourse[] = $enrolls->course_id;
         }
 
+        $complete = Complete::where('courses_id', '=', $lesson->courses_id)->where('lessons_id', '=', $lesson->id)->where('users_id', '=', $user->id)->count();
+
         if(in_array($course->id, $mycourse ) || $user_role == 'admin'){
-            return view('lesson.show', compact('course','lesson','someUsers', 'previous', 'next', 'next_last'));
+            return view('lesson.show', compact('course','lesson','someUsers', 'previous', 'next', 'complete'));
         }else{
             return redirect('/courses/'.$course->id);
         }
@@ -136,5 +141,13 @@ class LessonController extends Controller
     public function destroy($id)
     {
         
+    }
+
+
+    public function complete(Request $request)
+    {
+        $data = $request->all();
+        Complete::Create($data);
+        return redirect('/lesson/'.$request->get('lessons_id'));
     }
 }

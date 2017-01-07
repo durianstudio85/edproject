@@ -42,6 +42,18 @@
                             @endif
                         </div>
                         <p class="lesson_description">{{ $lesson->short_description }}</p>
+                        <br>
+                        @if( $complete == 1)
+                            <a href="#" class="btn btn-danger">Completed</a>
+                        @else
+                            {!! Form::open(['url'=>'complete']) !!}
+                                {!! Form::hidden('courses_id', $course->id); !!}
+                                {!! Form::hidden('lessons_id', $lesson->id); !!}
+                                {!! Form::hidden('users_id', Auth::user()->id); !!}
+                                {!! Form::submit('Complete', ['class' => 'btn btn-custom']) !!}
+                            {!! Form::close() !!}
+                        @endif
+                        
                         <div id="disqus_thread"></div>
                         <script type="text/javascript">
                             /* * * CONFIGURATION VARIABLES * * */

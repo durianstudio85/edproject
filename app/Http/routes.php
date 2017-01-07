@@ -36,6 +36,9 @@ Route::get('/lesson/{id}', 'LessonController@show');
 Route::get('/lesson/{id}/edit', 'LessonController@edit');
 Route::patch('/lesson/{id}/edit', 'LessonController@update');
 
+// Complete Lesson Add
+Route::post('/complete', 'LessonController@complete');
+
 // profile
 Route::get('/profile', 'ProfileController@index' );
 Route::get('/profile/edit', 'ProfileController@edit' );

@@ -30,6 +30,7 @@
                             <th>Description</th>
                             <th><center>No. Lesson</center></th>
                             <th><center>Duration</center></th>
+                            <th><center>Progress</center></th>
                             <th>Action</th>
                         </thead>
                         <tbody>
@@ -44,6 +45,15 @@
                                             @foreach($duration as $key => $value)
                                                 @if($key == $course->id)
                                                     {{ $value }}
+                                                @endif
+                                            @endforeach
+                                        </center>
+                                    </td>
+                                    <td>
+                                        <center>
+                                            @foreach($progress as $progress_key => $progress_value)
+                                                @if($progress_key == $course->id)
+                                                    {{ $progress_value }}%
                                                 @endif
                                             @endforeach
                                         </center>
