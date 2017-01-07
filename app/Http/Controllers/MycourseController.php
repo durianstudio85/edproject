@@ -25,6 +25,11 @@ class MycourseController extends Controller
      */
     public function index()
     {
+
+        
+
+
+
         $id = Auth::user()->id;
         $enroll = Enroll::where('user_id', '=', $id)->get();
         $items = array();
@@ -32,7 +37,11 @@ class MycourseController extends Controller
             $items[] = $enrolls->course_id;
         }
         $courses = Course::whereIn('id', $items)->get();
-        return view('mycourse.index', compact('courses', 'id'));
+
+        foreach ($courses as $get_duration) {
+            $duration[$get_duration->id] = $this->duration($get_duration->id) ;   
+        }
+        return view('mycourse.index', compact('courses', 'id', 'duration'));
     }
 
     /**
@@ -101,6 +110,26 @@ class MycourseController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+//$explodedTime[0]*
+
+    public function duration($course_id)
+    {
+        
+        $lesson = Lesson::where('courses_id', '=', $course_id)->get();
+        $sumSeconds = 0;
+        foreach ($lesson as $selected) {
+            $explodedTime = explode(':', $selected->duration);
+            $seconds = 3600+$explodedTime[0]*60+$explodedTime[1];
+            $sumSeconds += $seconds;
+        }
+        // $hours = floor($sumSeconds/3600);
+        // $hours.':'
+        $minutes = floor(($sumSeconds % 3600)/60);
+        $seconds = (($sumSeconds%3600)%60);
+        $sumTime = $minutes.':'.$seconds;
+        return $sumTime;
     }
 
 }

@@ -20,11 +20,16 @@
                 </h1>
                 <div class="content-table">
                     <hr>
+                    
+
+                    
                     <table class="table">
                         <thead>
                             <th>Name</th>
                             <th>Author</th>
                             <th>Description</th>
+                            <th><center>No. Lesson</center></th>
+                            <th><center>Duration</center></th>
                             <th>Action</th>
                         </thead>
                         <tbody>
@@ -33,9 +38,17 @@
                                     <td>{{ $course->name }}</td>
                                     <td>{{ $course->instructor_name }}</td>
                                     <td>{{ str_limit($course->description, $limit = 80, $end = '...') }}</td>
+                                    <td><center>{{ App\Lesson::where('courses_id','=',$course->id)->count() }}</center></td>
                                     <td>
-                                        
-                                        <a href="{{ url('/courses/'.$course->id) }}" class="btn btn-custom">View</a></td>
+                                        <center>
+                                            @foreach($duration as $key => $value)
+                                                @if($key == $course->id)
+                                                    {{ $value }}
+                                                @endif
+                                            @endforeach
+                                        </center>
+                                    </td>
+                                    <td><a href="{{ url('/courses/'.$course->id) }}" class="btn btn-custom">View</a></td>
                                 </tr>
                             @endforeach
                         </tbody>

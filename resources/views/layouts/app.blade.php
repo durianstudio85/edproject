@@ -49,7 +49,7 @@
             
             // $(".navbar-brand").click(function(){
             //     alert("Height of div: " + $(".content-all").height());
-            // });
+            // }); 
         });
     </script>
 

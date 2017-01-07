@@ -14,4 +14,6 @@ class Lesson extends Model
         'link',
         'duration',
 	];
+
+	 
 }
