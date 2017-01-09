@@ -370,6 +370,12 @@ img#user-avatar-upload{
     padding-left: 30px;
 }
 
+.lesson-video iframe{
+    width: 1280px !important;
+    height: 720px !important;
+
+}
+
 @media screen and (max-width: 1940px) {
     .header-all, .content-all{
         width: 73%;
