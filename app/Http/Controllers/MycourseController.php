@@ -124,16 +124,17 @@ class MycourseController extends Controller
         $lesson = Lesson::where('courses_id', '=', $course_id)->get();
         $sumSeconds = 0;
         foreach ($lesson as $selected) {
-            $explodedTime = explode(':', $selected->duration);
-            $seconds = 3600+$explodedTime[0]*60+$explodedTime[1];
+            $addZero = '00:'.$selected->duration;
+            $explodedTime = explode(':', $addZero);
+            $seconds = $explodedTime[0]*3600+$explodedTime[1]*60+$explodedTime[2];
             $sumSeconds += $seconds;
         }
-        // $hours = floor($sumSeconds/3600);
-        // $hours.':'
+        $hours = floor($sumSeconds/3600);
         $minutes = floor(($sumSeconds % 3600)/60);
         $seconds = (($sumSeconds%3600)%60);
-        $sumTime = $minutes.':'.$seconds;
-        return $sumTime;
+        $sumTime = $hours.':'.$minutes.':'.$seconds;
+        $change = gmdate("H:i:s", $sumSeconds);
+        return $change;
     }
 
 }
