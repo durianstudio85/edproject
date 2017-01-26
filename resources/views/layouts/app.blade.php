@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="keywords" content="">
+    <meta name="description" content="Choose our specialized courses">
     <title>Edproject</title>
     <link href="{{ asset('assets/images/favicon.ico') }}" rel="shortcut icon">
     <!-- <link rel="icon" type="image/png" href="" /> -->
@@ -59,7 +60,7 @@
     <div class="navbar navbar-inverse navbar-fixed-left">
         <div class="nav-header">
             <center>
-                <a class="navbar-brand" href="#"><img src="{{ asset('assets/images/logo1.png') }}"></a>
+                <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('assets/images/logo1.png') }}"></a>
                 <!-- {{ url('/') }} -->
             </center>
             <div class="user">

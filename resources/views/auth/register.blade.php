@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="We believe education is a right not a privilage">
     <title>EdProject</title>
     <link href="{{ asset('assets/images/favicon.ico') }}" rel="shortcut icon">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
