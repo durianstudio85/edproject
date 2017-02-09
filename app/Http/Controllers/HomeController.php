@@ -28,7 +28,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $courses = Course::get();
+        $courses = Course::orderBy('id','desc')->get();
         $mycourse = Enroll::get();
         return view('index', compact('courses'));
     }

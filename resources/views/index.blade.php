@@ -49,8 +49,8 @@
 			<section class="col-md-6 col-md-offset-6 caption">
 				<center>
 					<div class="button-wrap">
-						<button>GET STARTED</button>
-						<button>HOW IT WORKS</button>		
+						<a href="{{ url('/login') }}"><button>LOGIN</button></a>
+						<a href="{{ url('/register') }}"><button>SIGNUP</button></a>
 					</div>
 				</center>
 			</section>
