@@ -27,7 +27,7 @@
                         <thead>
                             <th>Name</th>
                             <th>Author</th>
-                            <th>Description</th>
+                            <!-- <th>Description</th> -->
                             <th><center>No. Lesson</center></th>
                             <th><center>Duration</center></th>
                             <th><center>Progress</center></th>
@@ -38,7 +38,7 @@
                                 <tr>
                                     <td>{{ $course->name }}</td>
                                     <td>{{ $course->instructor_name }}</td>
-                                    <td>{{ str_limit($course->description, $limit = 80, $end = '...') }}</td>
+                                    <!-- <td>{{ str_limit($course->description, $limit = 80, $end = '...') }}</td> -->
                                     <td><center>{{ App\Lesson::where('courses_id','=',$course->id)->count() }}</center></td>
                                     <td>
                                         <center>
