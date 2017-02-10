@@ -26,7 +26,7 @@ class CourseController extends Controller
     public function index()
     {
         // $courses = DB::table('courses')->get();
-        $courses = Course::get();
+        $courses = Course::orderBy('id','desc')->get();
         $mycourse = Enroll::get();
         $user = Auth::User();  
         $user_role = $user->user_role;

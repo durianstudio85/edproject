@@ -87,6 +87,7 @@
                                 <br>
 
                             <h1>Don't have an account? <a href="{{ url('/register') }}" title="" class="signin-btn" id="">Signup</a></h1>
+                            <h1>Forgot password? <a href="{{ url('/password/reset') }}" title="" class="signin-btn" id="">Click Here</a></h1>
                             </div>
                             </div>
                         </section>

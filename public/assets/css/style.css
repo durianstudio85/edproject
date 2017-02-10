@@ -938,3 +938,10 @@ body{
 
 
 
+button.btn-custom-login-reset{
+	background: #51c4b7;
+    color: #ffffff;
+    height: 43px;
+    width: auto;
+    border: 1px solid #51c4b7;
+}
