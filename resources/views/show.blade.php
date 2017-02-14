@@ -49,7 +49,7 @@
                         <h1 class="thumbnails-title">{{ $courses->name }}</h1>
                     </div>
                     <div class="col-md-6">
-                        <h3 class="thumbnails-author"><img src="http://localhost/github/laravel/edproject/public/upload/czzbWVJUKSgONX4pXapEhtmlandcss.jpg">Instructor: {{ $courses->instructor_name }}</h3>
+                        <h3 class="thumbnails-author"><img src="{{ asset('upload/'.$courses->instructor_img) }}">Instructor: {{ $courses->instructor_name }}</h3>
                     </div>
                     <form>
                         <div class="col-md-12">
