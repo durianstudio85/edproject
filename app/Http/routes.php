@@ -56,3 +56,6 @@ Route::post('/mycourses/create', 'MycourseController@store' );
 //Facebook
 Route::get('/redirect', 'SocialAuthController@redirect');
 Route::get('/callback', 'SocialAuthController@callback');
+
+
+Route::get('/{slug}/{id}', 'HomeController@show');

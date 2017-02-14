@@ -38,61 +38,45 @@
             </section>
         </header>
         <div class="container">
-            <div class="col-md-12  signup-form  ">
+            <div class="col-md-offset-1 col-md-10 signup-form  ">
+                <div class="col-md-12">
+                    <p class="description-link">
+                        {!! $first_lesson->link  !!}
+                    </p>
+                </div>
                 <header>
-                    <h3>Start Learning today....</h3>
-                    <h1>Signin</h1>
-                </header>
-                <!-- Custom Login form built with the ProfilePress WordPress plugin - http://profilepress.net -->
-
-                <form role="form" method="POST" action="{{ url('/login') }}">
-                    {{ csrf_field() }}
-                    <div class="form-horizontal">
-                        <section>
-                            <div class="form-group">
-                                <div class="col-md-offset-1 col-md-5">
-                                    <h1>Your account credentials</h1>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-offset-1 col-md-5">
-                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" style="width: 97%;" placeholder="Email">
-                                        @if ($errors->has('email'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('email') }}</strong>
-                                            </span>
-                                        @endif
-                                </div>
-                                <div class="col-md-5">
-                                    <input id="password" type="password" class="form-control" name="password" placeholder="Password" style="width: 97%;">
-                                        @if ($errors->has('password'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('password') }}</strong>
-                                            </span>
-                                        @endif
-                                </div>
-                            </div>
-                            <div class="row">
-                            <div class="col-md-offset-1 col-md-10">
-                                <input type="submit" name="login_submit" title="" class="btn btn-default btn-md btn-custom-login" id="login-button" value="Login">
-                                <br>
-                                <br>
-                                <br>
-                                <h1>You can sign in with popular social networks account</h1><br>
-
-                                <a href="#" class="btn-twitter"><i class="fa fa-twitter fa-lg"></i>&nbsp;Sign In with Twitter</a>
-                                <a href="redirect" class="btn-facebook"><i class="fa fa-facebook"></i>&nbsp;Sign In with Facebook</a>
-                                <br>
-                                <br>
-                                <br>
-
-                            <h1>Don't have an account? <a href="{{ url('/register') }}" title="" class="signin-btn" id="">Signup</a></h1>
-                            <h1>Forgot password? <a href="{{ url('/password/reset') }}" title="" class="signin-btn" id="">Click Here</a></h1>
-                            </div>
-                            </div>
-                        </section>
+                    <div class="col-md-6">
+                        <h1 class="thumbnails-title">{{ $courses->name }}</h1>
                     </div>
-                </form>
+                    <div class="col-md-6">
+                        <h3 class="thumbnails-author"><img src="http://localhost/github/laravel/edproject/public/upload/czzbWVJUKSgONX4pXapEhtmlandcss.jpg">Instructor: {{ $courses->instructor_name }}</h3>
+                    </div>
+                    <form>
+                        <div class="col-md-12">
+                            <h1>{{ $courses->description }}</h1>
+                        </div>
+                        <div class="col-md-12">
+                            <table class="table thumbnails-table">
+                                @foreach ( $lessonItems as $items)
+                                    <tr>
+                                        <td><h1>{{ $items->title }}</h1></td>
+                                        <td style="width: 56px;text-align:right;"><h1>{{ $items->duration }}</h1></td>
+                                    </tr>
+                                @endforeach
+                                    <tr>
+                                        <td><a href="#" class="signin-btn" style="font-size: 26px;">View More</a></td>
+                                    </tr>
+                            </table>
+                            
+                        </div>
+                    </form>
+                </header>
+                <div class="col-md-12">
+                    <center>
+                    <a href="{{ url('/courses/'.$courses->id) }}"> <input type="button" name="login_submit" title="" class="btn btn-default btn-md btn-custom-login" id="login-button" value="Enroll Now"></a>
+                    </center>
+                </div>
+                <!-- Custom Login form built with the ProfilePress WordPress plugin - http://profilepress.net -->
             </div>
          </div> 
     </div>

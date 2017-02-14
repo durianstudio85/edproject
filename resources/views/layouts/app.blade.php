@@ -6,7 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="">
     <meta name="description" content="Choose our specialized courses">
-    <title>Edproject</title>
+    @if( Request::path() == 'courses/create' )
+        <title>Edproject | Add Course </title>
+    @elseif(Request::path() == 'dashboard')
+        <title>Edproject | Dashboard </title>
+    @elseif( isset($lesson->id) )
+            <title>Edproject | {{ $lesson->title }} </title>
+    @elseif( isset($course->id) )
+        @if ( Request::path() == 'courses/'.$course->id.'/edit' )
+            <title>Edproject | Edit Course </title>
+        @elseif( Request::path() == 'courses/'.$course->id.'/lesson/create')
+            <title>Edproject | Add Lesson </title>
+        @else
+            <title>Edproject | {{ $course->name }} </title>
+        @endif
+    @else
+        <title>Edproject | {{ ucfirst(Request::path()) }} </title>
+    @endif
     <link href="{{ asset('assets/images/favicon.ico') }}" rel="shortcut icon">
     <!-- <link rel="icon" type="image/png" href="" /> -->
     <!-- Fonts -->

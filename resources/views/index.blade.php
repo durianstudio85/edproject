@@ -4,7 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="keywords" content="">
 	<meta name="description" content="We believe education is a right not a privilage">
-	<title>EdProject</title>
+	@if( Request::path() == '/')
+        <title>Edproject | Home </title>
+    @else
+        <title>Edproject | {{ ucfirst(Request::path()) }} </title>
+    @endif
 	<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
 	<link href="{{ asset('assets/images/favicon.ico') }}" rel="shortcut icon">
 	<!-- <link rel="icon" type="image/png" href="{{ asset('assets/images/edprojectfavicon.png') }}" /> -->

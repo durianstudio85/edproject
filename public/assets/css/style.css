@@ -945,3 +945,33 @@ button.btn-custom-login-reset{
     width: auto;
     border: 1px solid #51c4b7;
 }
+
+.description-link iframe {
+    width: 100% !important;
+    height: 534px !important;
+}
+
+.thumbnails-title{
+	padding: 21px 0px;
+}
+
+.thumbnails-author{
+	text-align: right;
+}
+
+.thumbnails-author img{
+	width: 37px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.thumbnails-table{
+	margin-top: 23px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.thumbnails-table h1{
+	padding-top: 11px;
+    margin-bottom: 0px;
+}
