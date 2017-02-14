@@ -23,7 +23,9 @@
                                 <img src="{{ asset('upload/'.$course->photo) }}"/><!-- <img src="{{ asset('assets/images/laravel5.2.png') }}" class="course-img"> -->
                             </div>
                             <div class="course-box-content">
+                        
                                 <a href="{{ url('/courses/'.$course->id) }}">{{ $course->name }}</a>
+
                                 <p>By {{ $course->instructor_name }}</p>
                             </div>
                             <div class="course-box-status">
