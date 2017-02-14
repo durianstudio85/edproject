@@ -57,7 +57,7 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        $slug = str_slug($request->get('name'), '_');
+        $slug = str_slug($request->get('name'), '-');
         $photo = $request->file('photo');
         $filename = str_random(20).$photo->getClientOriginalName();
         $photo->move(public_path().'/upload',$filename);
@@ -128,7 +128,7 @@ class CourseController extends Controller
     public function update(Request $request, $id)
     {
         $course = Course::findOrFail($id);
-        $slug = str_slug($request->get('name'), '_');
+        $slug = str_slug($request->get('name'), '-');
         // Course Images
         $photo = $request->file('photo');
         if (isset($photo)) {
