@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="">
     <meta name="description" content="We believe education is a right not a privilage">
-    <title>Edproject | {{ ucfirst(Request::path()) }} </title>
+    <title>Edproject | {{ ucfirst($courses->name) }} </title>
     <link href="{{ asset('assets/images/favicon.ico') }}" rel="shortcut icon">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.css') }}">
