@@ -44,6 +44,16 @@
                                                 {!! Form::textarea('description', null,['class'=>'form-control', 'placeholder'=>'Description']) !!}
                                             </div>
                                         </div>
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                {!! Form::label('name', 'Category', ['class' => 'awesome']) !!}
+                                                <select class="form-control" name="category">
+                                                    @foreach ($category as $list)
+                                                        <option value="{{ $list->id }}">{{ $list->name }}</option>    
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                              <div class="panel panel-default">

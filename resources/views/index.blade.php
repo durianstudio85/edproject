@@ -80,7 +80,6 @@
 			<div class="row">
 				<div class="col-md-3">
 					<div class="sidebar-front">
-						<p>Filter</p>
 						<ul>
 							@foreach( $categories as $list)
 							<li><a href="{{ url('/categories/'.str_slug($list->name, '-').'/'.$list->id ) }}"><p>{{ $list->name }}</p></li>

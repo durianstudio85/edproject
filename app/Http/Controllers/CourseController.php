@@ -9,7 +9,7 @@ use App\Course;
 use App\Lesson;
 use App\Enroll;
 use Auth;
-
+use App\Category;
 
 class CourseController extends Controller
 {
@@ -40,9 +40,10 @@ class CourseController extends Controller
      */
     public function create()
     {
-        $user = Auth::User();     
+        $user = Auth::User(); 
+        $category = Category::get();
         if ($user->user_role == 'admin') {
-            return view('course.create');
+            return view('course.create', compact('category'));
         }else{
             return redirect('/courses');
         }
@@ -71,6 +72,7 @@ class CourseController extends Controller
             'description' => $request->get('description'),
             'photo' => $filename,
             'instructor_name' => $request->get('instructor_name'),
+            'category' => $request->get('category'),
             'instructor_img' => $instructor_filename,
         ];
         Course::Create($data);
@@ -111,8 +113,9 @@ class CourseController extends Controller
         $user = Auth::User();     
         if ($user->user_role == 'admin') {
             $course = Course::findOrFail($id);
+            $category = Category::get();
             $lesson = Lesson::where('courses_id', '=', $course->id)->get();
-            return view('course.edit', compact('course', 'lesson'));
+            return view('course.edit', compact('course', 'lesson','category'));
         }else{
             return redirect('/courses');
         }
@@ -152,6 +155,7 @@ class CourseController extends Controller
             'description' => $request->get('description'),
             'photo' => $filename,
             'instructor_name' => $request->get('instructor_name'),
+            'category' => $request->get('category'),
             'instructor_img' => $instructor_filename,
         ];
         $course->update($data);
