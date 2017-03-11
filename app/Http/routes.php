@@ -17,7 +17,15 @@
 
 Route::auth();
 
+Route::get('/categories/create', 'CategoryController@index');
+Route::post('/categories/create', 'CategoryController@store');
+Route::get('/categories/{id}/edit', 'CategoryController@edit');
+Route::patch('/categories/{id}/edit', 'CategoryController@update');
+
 Route::get('/', 'HomeController@index');
+Route::get('/categories/{slug}/{id}', 'HomeController@categories');
+
+
 
 
 Route::get('/courses', 'CourseController@index');

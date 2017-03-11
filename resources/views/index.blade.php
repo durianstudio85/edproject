@@ -78,38 +78,50 @@
 				</div>
 			</div>
 			<div class="row">
-				@foreach($courses as $course)
-					<div class="col-md-3 col-sm-6">
-	                    <div class="course-list-box-single">
-	                    	<div class="course-list-box-border">
-		                        <div class="course-box-img">
-		                            <img src="{{ asset('upload/'.$course->photo) }}"/><!-- <img src="{{ asset('assets/images/laravel5.2.png') }}" class="course-img"> -->
-		                        </div>
-		                        <div class="course-box-content">
-		                        	@if (Auth::guest())
-		                        		<a href="{{ url('/'.$course->slug.'/'.$course->id) }}">{{ $course->name }}</a>
-	                                @else
-	                                    <a href="{{ url('/courses/'.$course->id) }}">{{ $course->name }}</a>
-	                                @endif
+				<div class="col-md-3">
+					<div class="sidebar-front">
+						<p>Filter</p>
+						<ul>
+							@foreach( $categories as $list)
+							<li><a href="{{ url('/categories/'.str_slug($list->name, '-').'/'.$list->id ) }}"><p>{{ $list->name }}</p></li>
+							@endforeach
+						</ul> 
+					</div>
+				</div>
+				<div class="col-md-9">
+					@foreach($courses as $course)
+						<div class="col-md-4 col-sm-6">
+		                    <div class="course-list-box-single">
+		                    	<div class="course-list-box-border">
+			                        <div class="course-box-img">
+			                            <img src="{{ asset('upload/'.$course->photo) }}"/><!-- <img src="{{ asset('assets/images/laravel5.2.png') }}" class="course-img"> -->
+			                        </div>
+			                        <div class="course-box-content">
+			                        	@if (Auth::guest())
+			                        		<a href="{{ url('/'.$course->slug.'/'.$course->id) }}">{{ $course->name }}</a>
+		                                @else
+		                                    <a href="{{ url('/courses/'.$course->id) }}">{{ $course->name }}</a>
+		                                @endif
 
 
 
-		                            <!-- <a href="{{ url('/courses/'.$course->id) }}">{{ $course->name }}</a> -->
-		                            <p>By {{ $course->instructor_name }}</p>
-		                        </div>
-		                        <div class="course-box-status">
-		                            <div class="course-box-status-user-count">
-		                                <i class="fa fa-users fa-lg" aria-hidden="true"></i>&nbsp;
-		                                    {{ App\Enroll::where('course_id','=',$course->id)->count() }}
-		                            </div>
-		                            <div class="course-box-status-price">
-		                                <p>FREE</p>
-		                            </div>
-		                        </div>
-	                    	</div>
+			                            <!-- <a href="{{ url('/courses/'.$course->id) }}">{{ $course->name }}</a> -->
+			                            <p>By {{ $course->instructor_name }}</p>
+			                        </div>
+			                        <div class="course-box-status">
+			                            <div class="course-box-status-user-count">
+			                                <i class="fa fa-users fa-lg" aria-hidden="true"></i>&nbsp;
+			                                    {{ App\Enroll::where('course_id','=',$course->id)->count() }}
+			                            </div>
+			                            <div class="course-box-status-price">
+			                                <p>FREE</p>
+			                            </div>
+			                        </div>
+		                    	</div>
+		                    </div>
 	                    </div>
-                    </div>
-                @endforeach
+	                @endforeach
+	            </div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">

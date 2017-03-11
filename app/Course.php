@@ -14,6 +14,7 @@ class Course extends Model
 		'photo',
 		'instructor_name',
 		'instructor_img',
+		'category',
 	];
 
 
@@ -26,7 +27,5 @@ class Course extends Model
     {
     	return $this->belongsToMany('App\User');
     }	
-
-
     
 }

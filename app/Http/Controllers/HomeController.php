@@ -9,6 +9,7 @@ use App\Course;
 use App\Enroll;
 use App\Lesson;
 use Auth;
+use App\Category;
 
 class HomeController extends Controller
 {
@@ -31,7 +32,28 @@ class HomeController extends Controller
     {
         $courses = Course::orderBy('id','desc')->get();
         $mycourse = Enroll::get();
-        return view('index', compact('courses'));
+
+        $categories = Category::get();
+
+        return view('index', compact('courses', 'categories'));
+    }
+
+    public function categories($slug='', $id='')
+    {
+        
+        $getCurrentCat = Category::find($id);
+        $currentSlug = str_slug($getCurrentCat->name, '-');
+
+        if ($currentSlug == $slug) {
+            $courses = Course::where('category', '=', $id)->orderBy('id','desc')->get();
+            $mycourse = Enroll::get();
+            $categories = Category::get();    
+
+            return view('index', compact('courses', 'categories'));
+        }else{
+            return redirect('/');
+        }
+        
     }
 
     public function show($slug, $id)

@@ -17,6 +17,7 @@
             <div class="col-md-10 col-sm-5 content-all">
                 <h1 class="pad-title">Dashboard
                     &nbsp;<a href="{{ url('/courses/create') }}" class="btn btn-custom">Add Course</a>
+                    <a href="{{ url('/categories/create') }}" class="btn btn-custom">Add Categories</a>
                 </h1>
 
                 <hr>

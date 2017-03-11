@@ -975,3 +975,31 @@ button.btn-custom-login-reset{
 	padding-top: 11px;
     margin-bottom: 0px;
 }
+
+.sidebar-front ul{
+	list-style-type: none;
+    padding-left: 0px;
+    border: 1px solid #f4f3f1;
+}
+
+.sidebar-front ul li{
+	
+}
+
+.sidebar-front ul li a{
+	width: 100%;
+	text-decoration: none;
+}
+
+.sidebar-front ul li a p{
+	padding: 10px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    color: #333333;
+}
+
+.sidebar-front ul li a:hover p{
+	background-color: #51c4b7;
+   	
+    color: #ffffff;
+}
