@@ -1003,3 +1003,8 @@ button.btn-custom-login-reset{
    	
     color: #ffffff;
 }
+
+.pagination .active span{
+	background-color: #51c4b7 !important;
+    border-color: #51c4b7 !important;
+}

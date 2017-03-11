@@ -120,15 +120,19 @@
 		                    </div>
 	                    </div>
 	                @endforeach
+	                <div class="col-md-12">
+	                	<center>{{ $courses->links() }}</center>
+	                </div>
+	                
 	            </div>
 			</div>
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-md-12">
 					<a href="{{ url('/courses') }}">
 						<button class="btn-browse-course">Browse courses</button>
 					</a>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<footer class="foot foot-front">

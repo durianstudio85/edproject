@@ -30,7 +30,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $courses = Course::orderBy('id','desc')->get();
+        $courses = Course::orderBy('id','desc')->paginate(15);
         $mycourse = Enroll::get();
 
         $categories = Category::get();
@@ -45,7 +45,7 @@ class HomeController extends Controller
         $currentSlug = str_slug($getCurrentCat->name, '-');
 
         if ($currentSlug == $slug) {
-            $courses = Course::where('category', '=', $id)->orderBy('id','desc')->get();
+            $courses = Course::where('category', '=', $id)->orderBy('name')->paginate(15);
             $mycourse = Enroll::get();
             $categories = Category::get();    
 
