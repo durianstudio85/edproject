@@ -30,7 +30,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $courses = Course::orderBy('id','desc')->paginate(15);
+        $courses = Course::orderBy('name')->paginate(15);
         $mycourse = Enroll::get();
 
         $categories = Category::get();
