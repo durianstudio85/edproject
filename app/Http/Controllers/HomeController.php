@@ -33,7 +33,7 @@ class HomeController extends Controller
         $courses = Course::orderBy('name')->paginate(15);
         $mycourse = Enroll::get();
 
-        $categories = Category::get();
+        $categories = Category::orderBy('name')->get();
 
         return view('index', compact('courses', 'categories'));
     }
@@ -47,7 +47,7 @@ class HomeController extends Controller
         if ($currentSlug == $slug) {
             $courses = Course::where('category', '=', $id)->orderBy('name')->paginate(15);
             $mycourse = Enroll::get();
-            $categories = Category::get();    
+            $categories = Category::orderBy('name')->get();    
 
             return view('index', compact('courses', 'categories'));
         }else{
