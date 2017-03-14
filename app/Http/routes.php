@@ -65,5 +65,8 @@ Route::post('/mycourses/create', 'MycourseController@store' );
 Route::get('/redirect', 'SocialAuthController@redirect');
 Route::get('/callback', 'SocialAuthController@callback');
 
+Route::post('/q', 'HomeController@search');
+Route::get('/q/{value}', 'HomeController@searchOut');
 
 Route::get('/{slug}/{id}', 'HomeController@show');
+

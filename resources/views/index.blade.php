@@ -29,7 +29,7 @@
 </head>
 <body>
   <!-- Static navbar -->
-  	<div class="indexbg">
+  	<div  {{{ ( Request::is('/') ? 'class=indexbg' : 'class=categoriesbg') }}}>
 		<header class="head">
 		    <section class="navbar navbar navbar-static-top">
 			    <div class="container">
@@ -52,23 +52,48 @@
 		      	</div>
 		    </section>
 		</header>
-		<content class="container">
-			<section class="col-md-6 col-md-offset-6 caption">
+		@if( Request::path() == '/')
+			<content class="container">
+				<section class="col-md-6 col-md-offset-6 caption">
+					<div class="caption-wrap">
+						<img src="{{ asset('assets/images/text1.png') }}" class="caption-text1 img-responsive">
+						<img src="{{ asset('assets/images/education.png') }}" class="caption-text2 img-responsive">
+						<img src="{{ asset('assets/images/text3.png') }}" class="caption-text3 img-responsive">
+					</div>
+				</section>
+				<section class="col-md-6 col-md-offset-6 caption">
+					<center>
+						<div class="button-wrap">
+							<a href="{{ url('/login') }}"><button>LOGIN</button></a>
+							<a href="{{ url('/register') }}"><button>SIGNUP</button></a>
+						</div>
+					</center>
+				</section>
+			</content>
+		@else
+			<section class="col-md-12 caption">
 				<div class="caption-wrap">
-					<img src="{{ asset('assets/images/text1.png') }}" class="caption-text1 img-responsive">
-					<img src="{{ asset('assets/images/text2.png') }}" class="caption-text2 img-responsive">
-					<img src="{{ asset('assets/images/text3.png') }}" class="caption-text3 img-responsive">
+					
+					<h2>We believe education is right, not a priviledge</h2>
+					<center>
+						{!! Form::open(['url'=>'/q','files'=>'true']) !!}
+						<div class="input-group dg-banner-input-group" style="width: 590px;">
+		                    <input required="required" class="form-control input-lg dg-banner-input" placeholder="Search Course" name="q" type="text">
+		                    <!-- <input type="text" class="form-control input-lg dg-banner-input" placeholder="Find logo, banner, artworks, etc...."> -->
+		                    <span class="input-group-btn gd-banner-button">
+		                        <button class="btn btn-default btn-lg dg-banner-btn" type="submit">SEARCH</button>
+		                   </span>
+		                    <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> -->
+		                </div>
+		                {!! Form::close() !!}
+	                </center>
+					
 				</div>
 			</section>
-			<section class="col-md-6 col-md-offset-6 caption">
-				<center>
-					<div class="button-wrap">
-						<a href="{{ url('/login') }}"><button>LOGIN</button></a>
-						<a href="{{ url('/register') }}"><button>SIGNUP</button></a>
-					</div>
-				</center>
-			</section>
-		</content>
+
+
+
+		@endif
 	</div>
 	<div class="course-section">
 		<div class="container">

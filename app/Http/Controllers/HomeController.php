@@ -34,7 +34,6 @@ class HomeController extends Controller
         $mycourse = Enroll::get();
 
         $categories = Category::orderBy('name')->get();
-
         return view('index', compact('courses', 'categories'));
     }
 
@@ -68,5 +67,20 @@ class HomeController extends Controller
         }else{
             return redirect('/');
         }
+    }
+
+
+    public function search(Request $request)
+    {
+        return redirect('/q/'.$request->get('q'));
+    }
+
+    public function searchOut($value='')
+    {
+        $courses = Course::where('name', 'LIKE', '%' . $value . '%')->orderBy('id','desc')->paginate(15);
+        $mycourse = Enroll::get();
+
+        $categories = Category::orderBy('name')->get();
+        return view('index', compact('courses', 'categories'));
     }
 }

@@ -1008,3 +1008,22 @@ button.btn-custom-login-reset{
 	background-color: #51c4b7 !important;
     border-color: #51c4b7 !important;
 }
+
+.categoriesbg{
+    background-color: #51c3b7;
+    margin-top: -30px;
+    height: 385px;
+    padding-top: 30px;
+}
+
+.categoriesbg .caption-wrap{
+	 margin-top: 0px;
+
+}
+
+.categoriesbg .caption-wrap h2{
+	font-family: "DKCrayonCrumble";
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+}
