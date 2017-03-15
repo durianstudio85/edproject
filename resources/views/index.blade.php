@@ -16,6 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.css') }} ">
 	<link href='https://fonts.googleapis.com/css?family=Signika:400,600,300,700' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script>
          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -24,6 +25,19 @@
 
          ga('create', 'UA-44336723-1', 'auto');
          ga('send', 'pageview');
+
+    </script>
+
+    <script>
+
+        $(document).ready(function() {
+            // $(".navbar-nav").height();
+                $(".indexbg").height( $( window ).height() );
+            // $(".navbar-brand").click(function(){
+            //     alert("Height of div: " + $(".content-all").height());
+            // }); 
+        });
+    
 
     </script>
 </head>
@@ -38,7 +52,11 @@
 				           <i class="fa fa-list"></i>
 				        </button>
 				        <a class="navbar-brand" href="{{ url('/') }}">
+				        	@if( Request::path() == '/' )
 				          	<div class="logo"><img src="{{ asset('assets/images/logo.png') }}"></div>
+				          	@else
+				          		<div class="logo"><img src="{{ asset('assets/images/logo-white.png') }}"></div>
+				          	@endif
 				        </a>
 			        </div>
 			        <nav id="navbar" class="navbar-collapse collapse header-menu">
@@ -74,7 +92,7 @@
 			<section class="col-md-12 caption">
 				<div class="caption-wrap">
 					
-					<h2>We believe education is right, not a priviledge</h2>
+					<h2>We believe education is a right, not a priviledge</h2>
 					<center>
 						{!! Form::open(['url'=>'/q','files'=>'true']) !!}
 						<div class="input-group dg-banner-input-group" style="width: 590px;">
